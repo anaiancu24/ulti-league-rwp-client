@@ -27,7 +27,6 @@ state = {
 		
 	}
 
-
 	onChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
@@ -35,7 +34,6 @@ state = {
   }
 
 	
-
 	render() {
 		if (this.props.signup.success) return (<Redirect to="/login" /> ) 
 		return (
