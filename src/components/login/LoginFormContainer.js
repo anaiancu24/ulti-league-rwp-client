@@ -1,8 +1,8 @@
 import * as React from 'react'
-import {connect} from 'react-redux'
-import {login} from '../../actions/users'
+import { connect } from 'react-redux'
+import { login } from '../../actions/users'
 import LoginForm from './LoginForm'
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 class LoginFormContainer extends React.Component {
 	state = {
@@ -18,17 +18,17 @@ class LoginFormContainer extends React.Component {
 		this.setState({
 			firstName: '',
 			lastName: '',
-			email:'',
-			password:'',
-			confirmPassword:''
+			email: '',
+			password: '',
+			confirmPassword: ''
 		})
 	}
 
 	onChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
+		this.setState({
+			[event.target.name]: event.target.value
+		})
+	}
 
 
 	render() {
@@ -39,9 +39,9 @@ class LoginFormContainer extends React.Component {
 		return (
 			<div>
 				<h1>Login</h1>
-				<LoginForm onSubmit={this.onSubmit} onChange={this.onChange} values={this.state}  />
-        { this.props.error && 
-          <span style={{color:'red'}}>{this.props.error}</span> }
+				<LoginForm onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} />
+				{this.props.error &&
+					<span style={{ color: 'red' }}>{this.props.error}</span>}
 			</div>
 		)
 	}
@@ -50,8 +50,8 @@ class LoginFormContainer extends React.Component {
 const mapStateToProps = function (state) {
 	return {
 		currentUser: state.currentUser,
-    error: state.login.error
+		error: state.login.error
 	}
 }
 
-export default connect(mapStateToProps, {login})(LoginFormContainer)
+export default connect(mapStateToProps, { login })(LoginFormContainer)
