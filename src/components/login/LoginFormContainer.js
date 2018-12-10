@@ -1,16 +1,14 @@
-import * as React from 'react'
+import React, { PureComponent} from 'react';
 import { connect } from 'react-redux'
 import { login } from '../../actions/users'
 import LoginForm from './LoginForm'
 import { Redirect } from 'react-router-dom'
 
-class LoginFormContainer extends React.Component {
+class LoginFormContainer extends PureComponent {
 	state = {
 		email: '',
 		password: ''
 	}
-
-
 
 	onSubmit = (event) => {
 		event.preventDefault()
@@ -29,7 +27,6 @@ class LoginFormContainer extends React.Component {
 			[event.target.name]: event.target.value
 		})
 	}
-
 
 	render() {
 		if (this.props.currentUser) return (

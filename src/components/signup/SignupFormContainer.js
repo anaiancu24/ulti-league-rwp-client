@@ -1,10 +1,10 @@
-import * as React from 'react'
+import React, { PureComponent} from 'react';
 import { connect } from 'react-redux'
 import { signUp } from '../../actions/users'
 import SignupForm from './SignupForm'
 import { Redirect } from 'react-router-dom'
 
-class SignupFormContainer extends React.Component {
+class SignupFormContainer extends PureComponent {
 
 	state = {
 		firstName: '',
