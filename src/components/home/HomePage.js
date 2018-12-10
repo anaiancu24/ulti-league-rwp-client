@@ -1,6 +1,6 @@
 import * as React from 'react';
 import HomePageBanner from './HomePageBanner'
-//import './HomePageStyles.css';
+import './HomePageStyles.css';
 
 export default class HomePage extends React.Component {
   render() {
