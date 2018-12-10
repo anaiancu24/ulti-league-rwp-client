@@ -1,0 +1,24 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.home-page-banner {
+  min-width: 95vw;
+  height: 70vh;
+  background-color: black;
+  padding-top: 50px;
+}
+
+.home-page-info {
+  width: 500px;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.update-feed {
+  border: 1px solid white;
+  padding: 10px;
+}
