@@ -1,5 +1,4 @@
 import * as React from 'react'
-import './SignupForm.css'
 
 export default function SignupForm(props) {
 		return (
