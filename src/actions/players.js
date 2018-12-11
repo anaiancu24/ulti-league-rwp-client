@@ -1,3 +1,6 @@
+import * as request from 'superagent'
+import { baseUrl } from '../constants'
+
 export const PLAYER_LOADED = 'PLAYER_LOADED'
 export const PLAYERS_LOADED = 'PLAYERS_LOADED'
 

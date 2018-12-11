@@ -7,7 +7,7 @@ export default function (state = null, {type, payload}) {
       players[player.id] = player
       return players
       }, {...state})
-    case PLAYERS_LOADED:
+    case PLAYER_LOADED:
             return {...state, 
               [payload.id]: payload
             }

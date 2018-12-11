@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import CommunityOwnerProfile from './CommuityOwnerProfile';
+import CommunityOwnerProfile from './CommunityOwnerProfile';
 import { loadCommunityOwner } from '../../actions/communityOwners'
-
 
 class CommunityOwnerProfileContainer extends PureComponent {
 
