@@ -20,8 +20,8 @@ class CoachProfileContainer extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-  /* player: state.player,
-  playerId: state.event && state.event.id, */
+  /* coach: state.coach,
+  coachId: state.coach && state.coach.id, */
   authenticated: !!state.currentUser
 })
 
