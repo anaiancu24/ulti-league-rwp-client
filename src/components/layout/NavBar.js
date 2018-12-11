@@ -9,7 +9,6 @@ const NavBar = () => {
 
 
   return (
-  
       <ul className='menu'>
         <Link to={'/'}> <li className='menuItem'>Home</li></Link>
         <Link to={'/login'}><li className='menuItem' style= {{float:'right'}}> Login</li></Link>
@@ -21,7 +20,7 @@ const NavBar = () => {
 }
 
 const mapStateToProps = state => ({
-
+  authenticated: !!state.currentUser
 })
 
 export default withRouter(connect(mapStateToProps)(NavBar))

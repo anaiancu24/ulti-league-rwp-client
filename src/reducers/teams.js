@@ -1,4 +1,4 @@
-import { TEAMS_LOADED } from '../actions/teams'
+import { TEAMS_LOADED, TEAM_LOADED } from '../actions/teams'
 
 export default function (state = null, {type, teams}) {
   switch (type) {
@@ -7,7 +7,10 @@ export default function (state = null, {type, teams}) {
       teams[team.id] = team
       return teams
       }, {...state})
+    ase TEAM_LOADED:
+      return { ...team }
     default:
       return state
   }
 }
+

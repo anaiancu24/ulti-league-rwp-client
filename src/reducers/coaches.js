@@ -1,4 +1,4 @@
-import { COACHES_FETCHED_SUCCESS } from '../actions/coaches'
+import { COACHES_FETCHED_SUCCESS, COACH_LOADED } from '../actions/coaches'
 
 export default function (state = null, {type, coaches}) {
   switch (type) {
@@ -7,6 +7,8 @@ export default function (state = null, {type, coaches}) {
       coaches[coach.id] = coach
       return coaches
       }, {...state})
+    case COACH_LOADED:
+      return { ...coach }
     default:
       return state
   }

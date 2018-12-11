@@ -1,4 +1,4 @@
-import { COMMUNITY_OWNERS_LOADED } from '../actions/communityOwners'
+import { COMMUNITY_OWNERS_LOADED, COMMUNITY_OWNER_LOADED } from '../actions/communityOwners'
 
 export default function (state = null, {type, communityOwners}) {
   switch (type) {
@@ -7,6 +7,8 @@ export default function (state = null, {type, communityOwners}) {
         communityOwners[communityOwner.id] = communityOwner
       return communityOwners
       }, {...state})
+    case COMMUNITY_OWNER_LOADED:
+      return { ...communityOwner }
     default:
       return state
   }

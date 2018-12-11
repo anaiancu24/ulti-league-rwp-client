@@ -20,7 +20,7 @@ class PlayerProfileContainer extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-  /* player: state.player,
+  /* player: state.players && state.players.find(id),
   playerId: state.event && state.event.id, */
   authenticated: !!state.currentUser
 })
