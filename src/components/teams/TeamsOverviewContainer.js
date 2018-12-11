@@ -2,11 +2,11 @@
 
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import PlayersOverview from './PlayersOverview';
-import { loadPlayers } from '../../actions/players'
+import TeamsOverview from './TeamsOverview';
+import { loadTeams } from '../../actions/players'
 
 
-class PlayersOverviewContainer extends PureComponent {
+class TeamsOverviewContainer extends PureComponent {
 
   /* componentDidMount() {
     this.props.loadPlayer(Number(this.props.match.params.id))
@@ -14,8 +14,8 @@ class PlayersOverviewContainer extends PureComponent {
 
   render() {
     return (
-      <div className="player-overview-container">
-        <PlayersOverview />
+      <div className="teams-overview-container">
+        <TeamsOverview />
       </div>
     )
   }
@@ -27,7 +27,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  loadPlayers
+  loadTeams
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlayersOverviewContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(TeamsOverviewContainer)
