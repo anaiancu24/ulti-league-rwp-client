@@ -8,7 +8,7 @@ import SignupFormContainer from './components/signup/SignupFormContainer';
 import PlayerProfileContainer from './components/players/PlayerProfileContainer';
 import CoachProfileContainer from './components/coaches/CoachProfileContainer';
 import TeamProfileContainer from './components/teams/TeamProfileContainer';
-import CommunityOwnerProfileContainer from './components/communityOwners/communityOwnerProfileContainer';
+import CommunityOwnerProfileContainer from './components/communityOwners/CommunityOwnerProfileContainer';
 import Footer from './components/layout/Footer'
 import './App.css';
 
