@@ -3,8 +3,6 @@ import HomePageBanner from './HomePageBanner'
 import './HomePageStyles.css';
 import HomePageInfo from './HomePageInfo';
 import UpdateFeed from './UpdateFeed';
-import { Redirect } from 'react-router-dom'
-
 
 export default class HomePage extends PureComponent {
   render() {

@@ -12,7 +12,7 @@ class SignupFormContainer extends PureComponent {
 		email: '',
 		password: '',
 		confirmPassword: '',
-		role: 'Pick your role'
+		account: 'Pick your role'
 	}
 
 	onSubmit = (event) => {
@@ -24,7 +24,7 @@ class SignupFormContainer extends PureComponent {
 			email: '',
 			password: '',
 			confirmPassword: '',
-			role: 'Pick your role'
+			account: 'Pick your role'
 		})
 
 	}

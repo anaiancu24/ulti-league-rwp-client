@@ -14,7 +14,7 @@ export default function SignupForm(props) {
   					<input type="email" name="email" value={props.values.email} onChange={props.onChange} />
 				</label>
 				<label> I want to be a
-  				<select value={props.values.role} name='role' onChange={props.onChange}>
+  				<select value={props.values.account} name='account' onChange={props.onChange}>
 						<option selected disabled hidden style={{ display: 'none' }} value='Pick your role'>Pick your role</option>
 						<option value='player'>Player</option>
 						<option value='communityOwner'>Community Owner</option>
