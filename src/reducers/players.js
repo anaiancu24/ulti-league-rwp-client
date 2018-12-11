@@ -8,7 +8,7 @@ export default function (state = null, {type, players}) {
       return players
       }, {...state})
     case PLAYER_LOADED:
-      return { ...player }
+      return state
     default:
       return state
   }
