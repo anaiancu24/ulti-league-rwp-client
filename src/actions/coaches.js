@@ -6,12 +6,12 @@ export const COACH_LOADED = 'COACH_LOADED'
 
 const coachesLoaded = (coaches) => ({
   type: COACHES_LOADED,
-  coaches
+  payload: coaches
 })
 
 const coachLoaded = (coach) => ({
   type: COACH_LOADED,
-  coach
+  payload: coach
 })
 
 export const loadCoaches = () => (dispatch) => {

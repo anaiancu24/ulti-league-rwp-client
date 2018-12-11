@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import CommunityOwnerProfile from './CommunityOwnerProfile';
 import { loadCommunityOwner } from '../../actions/communityOwners'
 
-
 class CommunityOwnerProfileContainer extends PureComponent {
 
   /* componentDidMount() {
