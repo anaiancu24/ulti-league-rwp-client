@@ -6,6 +6,7 @@ import LogoutPage from './components/logout/LogoutPage';
 import LoginFormContainer from './components/login/LoginFormContainer';
 import SignupFormContainer from './components/signup/SignupFormContainer';
 import PlayerProfileContainer from './components/players/PlayerProfileContainer';
+import Footer from './components/layout/Footer'
 import './App.css';
 
 
@@ -17,11 +18,16 @@ class App extends PureComponent {
           <nav>
             <NavBar />
           </nav>
-          <Route exact path="/login" component={LoginFormContainer} />
-          <Route exact path="/signup" component={SignupFormContainer} />
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/logout" component={LogoutPage} />
-          <Route exact path="/players/:id" component={PlayerProfileContainer} />
+          <main>
+            <Route exact path="/login" component={LoginFormContainer} />
+            <Route exact path="/signup" component={SignupFormContainer} />
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/logout" component={LogoutPage} />
+            <Route exact path="/players/:id" component={PlayerProfileContainer} />
+          </main>
+          <footer>
+            <Footer />
+          </footer>
         </div>
       </Router>
     );
