@@ -17,7 +17,10 @@ const coachLoaded = (coach) => ({
 export const loadCoaches = () => (dispatch) => {
   request
     .get(`${baseUrl}/coaches`)
-    .then(response => dispatch(coachesLoaded(response.body.coaches)))
+    .then(response => {
+      console.log(response)
+      dispatch(coachesLoaded(response.body.coaches))
+    })
     .catch(err => console.error(err))
 }
 

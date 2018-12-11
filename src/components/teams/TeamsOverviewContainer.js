@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import TeamsOverview from './TeamsOverview';
-import { loadTeams } from '../../actions/players'
+import { loadTeams } from '../../actions/teams'
 
 
 class TeamsOverviewContainer extends PureComponent {

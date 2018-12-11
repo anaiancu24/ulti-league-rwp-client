@@ -2,15 +2,15 @@
 
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import CoachesOverview from './coachesOverview';
+import CoachesOverview from './CoachesOverview';
 import { loadCoaches } from '../../actions/coaches'
 
 
 class CoachesOverviewContainer extends PureComponent {
 
-  /* componentDidMount() {
-    this.props.loadPlayer(Number(this.props.match.params.id))
-  } */
+  componentDidMount() {
+    this.props.loadCoaches()
+  }
 
   render() {
     return (

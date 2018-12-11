@@ -13,7 +13,7 @@ export default class HomePage extends PureComponent {
         <button onClick={() => history.push('/coaches/1')}>Coach Profile Test</button>
         <button onClick={() => history.push('/teams/1')}>Team Profile Test</button>
         <button onClick={() => history.push('/players/1')}>Player Profile Test</button>
-        <button onClick={() => history.push('/communityOwners/1')}>Community Owner Profile Test</button>
+        <button onClick={() => history.push('/communityowners/1')}>Community Owner Profile Test</button>
         <HomePageInfo />
         <UpdateFeed />
       </div>
