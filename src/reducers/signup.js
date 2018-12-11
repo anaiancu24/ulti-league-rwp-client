@@ -2,8 +2,8 @@ import {
 	USER_SIGNUP_SUCCESS, USER_SIGNUP_FAILED
 } from '../actions/users'
 
-export default function (state = {}, action) {
-	switch(action.type) {
+export default function (state = {}, {type, payload }) {
+	switch(type) {
     case USER_SIGNUP_SUCCESS:
       return {
         success: true
@@ -11,7 +11,7 @@ export default function (state = {}, action) {
 
     case USER_SIGNUP_FAILED:
       return {
-        error: action.payload
+        error: payload
       }
 
 		default:

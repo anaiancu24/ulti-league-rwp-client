@@ -1,10 +1,16 @@
-import { TEAM_LOADED } from '../actions/team'
+import { TEAMS_LOADED, TEAM_LOADED } from '../actions/teams'
 
-export default function (state = null, { type, team }) {
+export default function (state = null, {type, teams}) {
   switch (type) {
-    case TEAM_LOADED:
+    case TEAMS_LOADED:
+      return teams.reduce((teams, team) => {
+      teams[team.id] = team
+      return teams
+      }, {...state})
+    ase TEAM_LOADED:
       return { ...team }
     default:
       return state
   }
 }
+
