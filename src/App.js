@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import HomePage from './components/home/HomePage'
 import NavBar from './components/layout/NavBar'
 import LogoutPage from './components/logout/LogoutPage';
 import './App.css';
 import LoginFormContainer from './components/login/LoginFormContainer';
 import SignupFormContainer from './components/signup/SignupFormContainer';
+import PlayerProfileContainer from './components/players/PlayerProfileContainer';
 
 class App extends PureComponent {
   render() {
@@ -19,7 +20,7 @@ class App extends PureComponent {
           <Route exact path="/signup" component={SignupFormContainer} />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/logout" component={LogoutPage} />
-          <Route path="" render={() => <Redirect to="/" />} />
+          <Route exact path="/players/:id" component={PlayerProfileContainer} />
         </div>
       </Router>
     );

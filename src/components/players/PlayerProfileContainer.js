@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PlayerProfile from './PlayerProfile';
-// import { loadPlayer } from '../../actions/players'
+import { loadPlayer } from '../../actions/players'
 
 
 class PlayerProfileContainer extends PureComponent {
@@ -26,7 +26,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  //loadEvent
+  loadPlayer
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayerProfileContainer)
