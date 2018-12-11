@@ -8,7 +8,7 @@ export default function (state = null, {type, teams}) {
       return teams
       }, {...state})
     case TEAM_LOADED:
-      return { ...team }
+      return state
     default:
       return state
   }

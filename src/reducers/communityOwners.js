@@ -8,7 +8,7 @@ export default function (state = null, {type, communityOwners}) {
       return communityOwners
       }, {...state})
     case COMMUNITY_OWNER_LOADED:
-      return { ...communityOwner }
+      return state
     default:
       return state
   }
