@@ -21,7 +21,7 @@ export const loadCommunityOwners = () => (dispatch) => {
     .catch(err => console.error(err))
 }
 
-export const loadCommunityOwners = (id) => (dispatch) => {
+export const loadCommunityOwner = (id) => (dispatch) => {
   request
     .get(`${baseUrl}/communityOwners/${id}`)
     .then(response => dispatch(communityOwnerLoaded(response.body.communityOwner)))

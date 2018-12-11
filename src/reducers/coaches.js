@@ -1,8 +1,8 @@
-import { COACHES_FETCHED_SUCCESS, COACH_LOADED } from '../actions/coaches'
+import { COACHES_LOADED, COACH_LOADED } from '../actions/coaches'
 
 export default function (state = null, {type, coaches}) {
   switch (type) {
-    case COACHES_FETCHED_SUCCESS:
+    case COACHES_LOADED:
       return coaches.reduce((coaches, coach) => {
       coaches[coach.id] = coach
       return coaches

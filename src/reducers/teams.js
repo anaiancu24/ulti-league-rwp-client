@@ -7,7 +7,7 @@ export default function (state = null, {type, teams}) {
       teams[team.id] = team
       return teams
       }, {...state})
-    ase TEAM_LOADED:
+    case TEAM_LOADED:
       return { ...team }
     default:
       return state
