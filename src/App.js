@@ -13,9 +13,11 @@ import Footer from './components/layout/Footer'
 import './App.css';
 import PlayersOverviewContainer from './components/players/PlayersOverviewContainer';
 import CoachesOverviewContainer from './components/coaches/CoachesOverviewContainer';
-import OwnerOverviewContainer from './components/owners/OwnersOverviewContainer'
-import TeamsOverviewContainer from './components/teams/TeamsOverviewContainer'
-import YourTeamContainer from './components/yourteam/YourTeamContainer'
+import OwnerOverviewContainer from './components/owners/OwnersOverviewContainer';
+import TeamsOverviewContainer from './components/teams/TeamsOverviewContainer';
+import DashboardContainer from './components/dashboard/DashboardContainer';
+import YourTeamContainer from './components/yourteam/YourTeamContainer';
+
 
 
 class App extends PureComponent {
@@ -39,6 +41,7 @@ class App extends PureComponent {
             <Route exact path="/coaches" component={CoachesOverviewContainer} />
             <Route exact path="/communityowners" component={OwnerOverviewContainer} />
             <Route exact path="/teams" component={TeamsOverviewContainer} />
+            <Route exact path="/Myaccount" component={DashboardContainer} />
             <Route exact path="/yourteam" component={YourTeamContainer} />
           </main>
           <footer>
