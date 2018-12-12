@@ -13,6 +13,7 @@ const NavBar = (props) => {
         <Link to={'/'}> <li className='menuItem'>Home</li></Link>
         <Link to={'/coaches'}> <li className='menuItem'>Coaches</li></Link>
         <Link to={'/communityowners'}> <li className='menuItem'>Community Owners</li></Link>
+        <Link to={'/yourteam'}> <li className='menuItem'>Your Team</li></Link>
         {
           !authenticated &&
           <Link to={'/login'}><li className='menuItem' style={{ float: 'right' }}> Login</li></Link>
@@ -27,7 +28,7 @@ const NavBar = (props) => {
         }
         {
           authenticated &&
-          <Link to={'/logout'}><li className='menuItem' style={{ float: 'right' }} >Logout</li></Link>
+          <Link to={'/logout'}><li className='menuItem' style={{ float: 'right' }}>Logout</li></Link>
         }
       </ul>
 
