@@ -4,7 +4,7 @@ import currentUser from './currentUsers'
 import signup from './signup'
 import players from './players'
 import coaches from './coaches'
-import communityOwners from './communityOwners'
+import owners from './owners'
 import teams from './teams'
 
 
@@ -12,7 +12,7 @@ import teams from './teams'
 export default combineReducers({
   players,
   coaches,
-  communityOwners,
+  owners,
   teams,
   currentUser,
   signup,

@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import CommunityOwnerProfile from './CommunityOwnerProfile';
-import { loadCommunityOwner } from '../../actions/communityOwners'
+import OwnerProfile from './OwnerProfile';
+import { loadOwner } from '../../actions/owners'
 
-class CommunityOwnerProfileContainer extends PureComponent {
+class OwnerProfileContainer extends PureComponent {
 
   /* componentDidMount() {
     this.props.loadCoach(Number(this.props.match.params.id))
@@ -11,8 +11,8 @@ class CommunityOwnerProfileContainer extends PureComponent {
 
   render() {
     return (
-      <div className="co-profile-container">
-        <CommunityOwnerProfile />
+      <div className="owner-profile-container">
+        <OwnerProfile />
       </div>
     )
   }
@@ -25,7 +25,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  loadCommunityOwner
+  loadOwner
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CommunityOwnerProfileContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(OwnerProfileContainer)
