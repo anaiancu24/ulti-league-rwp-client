@@ -1,0 +1,35 @@
+.dashboard-events {
+  width: 500px;
+  border: 1px solid white;
+}
+
+.dashboard-news {
+  width: 500px;
+  border: 1px solid white;
+}
+
+.dashboard-followed-teams {
+  width: 500px;
+  border: 1px solid white;
+}
+
+.dashboard-league-table {
+  width: 500px;
+  border: 1px solid white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
