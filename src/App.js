@@ -15,6 +15,7 @@ import PlayersOverviewContainer from './components/players/PlayersOverviewContai
 import CoachesOverviewContainer from './components/coaches/CoachesOverviewContainer';
 import OwnerOverviewContainer from './components/owners/OwnersOverviewContainer'
 import TeamsOverviewContainer from './components/teams/TeamsOverviewContainer'
+import YourTeamContainer from './components/yourteam/YourTeamContainer'
 
 
 class App extends PureComponent {
@@ -38,6 +39,7 @@ class App extends PureComponent {
             <Route exact path="/coaches" component={CoachesOverviewContainer} />
             <Route exact path="/communityowners" component={OwnerOverviewContainer} />
             <Route exact path="/teams" component={TeamsOverviewContainer} />
+            <Route exact path="/yourteam" component={YourTeamContainer} />
           </main>
           <footer>
             <Footer />
