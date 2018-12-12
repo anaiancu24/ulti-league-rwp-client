@@ -22,7 +22,7 @@ const { authenticated } = props
         <Link to={'/signup'}><li className='menuItem' style= {{float:'right'}} >Signup</li></Link>
         }
         {
-        !authenticated &&
+        authenticated &&
         <Link to={'/Myaccount'}><li className='menuItem' style= {{float:'right'}}>My account</li></Link>
         }
         {
