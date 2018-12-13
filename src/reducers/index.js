@@ -13,6 +13,7 @@ import events from './events'
 import event from './event'
 import games from './games'
 import game from './game'
+import userData from './userData'
 
 export default combineReducers({
   players,
@@ -27,6 +28,7 @@ export default combineReducers({
   events,
   event,
   currentUser,
+  userData,
   signup,
   login,
   
