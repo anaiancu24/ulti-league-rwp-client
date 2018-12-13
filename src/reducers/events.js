@@ -1,16 +1,9 @@
-import { EVENTS_LOADED, EVENT_LOADED } from '../actions/events'
+import { EVENTS_LOADED } from '../actions/events'
 
-export default function (state = null, {type, payload}) {
+export default function (state = null, { type, events }) {
   switch (type) {
     case EVENTS_LOADED:
-      return payload.reduce((events, event) => {
-      events[event.id] = event
-      return events
-      }, {...state})
-    case EVENT_LOADED:
-      return {...state, 
-        [payload.id]: payload
-      }
+      return events.map(event => ({ ...event}))
     default:
       return state
   }

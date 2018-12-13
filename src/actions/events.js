@@ -6,12 +6,12 @@ export const EVENT_LOADED = 'EVENT_LOADED'
 
 const eventsLoaded = (events) => ({
   type: EVENTS_LOADED,
-  payload: events
+  events
 })
 
 const eventLoaded = (event) => ({
   type: EVENT_LOADED,
-  payload: event
+  event
 })
 
 export const loadEvents = () => (dispatch) => {

@@ -41,9 +41,8 @@ componentWillMount() {
 }
 
 const mapStateToProps = state => ({
-
   authenticated: !!state.currentUser,
-  events: state.events && Object.values(state.events)
+  events: state.events
 })
 
 const mapDispatchToProps = {
