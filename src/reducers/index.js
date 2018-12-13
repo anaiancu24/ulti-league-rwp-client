@@ -10,21 +10,24 @@ import owners from './owners'
 import teams from './teams'
 import team from './team'
 import events from './events'
+import event from './event'
 import games from './games'
-
-
+import game from './game'
 
 export default combineReducers({
   players,
   player,
   coaches,
   coach,
+  games,
+  game,
   owners,
   teams,
   team,
+  events,
+  event,
   currentUser,
   signup,
   login,
-  events,
-  games
+  
 })

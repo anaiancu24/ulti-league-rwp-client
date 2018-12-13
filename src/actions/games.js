@@ -6,12 +6,12 @@ export const GAME_LOADED = 'GAME_LOADED'
 
 const gamesLoaded = (games) => ({
   type: GAMES_LOADED,
-  payload: games
+  games
 })
 
 const gameLoaded = (game) => ({
   type: GAME_LOADED,
-  payload: game
+  game
 })
 
 export const loadGames = () => (dispatch) => {

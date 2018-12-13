@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import HomePage from './home/HomePage'
 import LogoutPage from './logout/LogoutPage';
 import LoginFormContainer from './login/LoginFormContainer';
@@ -30,9 +30,8 @@ export default function Routes() {
       <Route exact path="/coaches" component={CoachesOverviewContainer} />
       <Route exact path="/communityowners" component={OwnerOverviewContainer} />
       <Route exact path="/teams" component={TeamsOverviewContainer} />
-      <Route exact path="/Myaccount" component={DashboardContainer} />
+      <Route exact path="/myaccount" component={DashboardContainer} />
       <Route exact path="/yourteam" component={YourTeamContainer} />
-      <Route path="" render={() => <Redirect to="/" />} />
     </div>
   )
 }
