@@ -1,19 +1,19 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
-import HomePage from './components/home/HomePage'
-import LogoutPage from './components/logout/LogoutPage';
-import LoginFormContainer from './components/login/LoginFormContainer';
-import SignupFormContainer from './components/signup/SignupFormContainer';
-import PlayerProfileContainer from './components/players/PlayerProfileContainer';
-import CoachProfileContainer from './components/coaches/CoachProfileContainer';
-import TeamProfileContainer from './components/teams/TeamProfileContainer';
-import OwnerProfileContainer from './components/owners/OwnerProfileContainer';
-import PlayersOverviewContainer from './components/players/PlayersOverviewContainer';
-import CoachesOverviewContainer from './components/coaches/CoachesOverviewContainer';
-import OwnerOverviewContainer from './components/owners/OwnersOverviewContainer';
-import TeamsOverviewContainer from './components/teams/TeamsOverviewContainer';
-import DashboardContainer from './components/dashboard/DashboardContainer';
-import YourTeamContainer from './components/yourteam/YourTeamContainer';
+import HomePage from './home/HomePage'
+import LogoutPage from './logout/LogoutPage';
+import LoginFormContainer from './login/LoginFormContainer';
+import SignupFormContainer from './signup/SignupFormContainer';
+import PlayerProfileContainer from './players/PlayerProfileContainer';
+import CoachProfileContainer from './coaches/CoachProfileContainer';
+import TeamProfileContainer from './teams/TeamProfileContainer';
+import OwnerProfileContainer from './owners/OwnerProfileContainer';
+import PlayersOverviewContainer from './players/PlayersOverviewContainer';
+import CoachesOverviewContainer from './coaches/CoachesOverviewContainer';
+import OwnerOverviewContainer from './owners/OwnersOverviewContainer';
+import TeamsOverviewContainer from './teams/TeamsOverviewContainer';
+import DashboardContainer from './dashboard/DashboardContainer';
+import YourTeamContainer from './yourteam/YourTeamContainer';
 
 export default function Routes() {
   return ( 

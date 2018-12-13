@@ -6,12 +6,12 @@ export const TEAM_LOADED = 'TEAM_LOADED'
 
 const teamsLoaded = (teams) => ({
   type: TEAMS_LOADED,
-  payload: teams
+  teams
 })
 
 const teamLoaded = (team) => ({
   type: TEAM_LOADED,
-  payload: team
+  team
 })
 
 export const loadTeams = () => (dispatch) => {
