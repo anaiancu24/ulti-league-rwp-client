@@ -7,9 +7,7 @@ import { loadPlayer } from '../../actions/players'
 class PlayerProfileContainer extends PureComponent {
 
   componentDidMount() {
-    if (!this.props.player) {
       this.props.loadPlayer(Number(this.props.match.params.id))
-    }
   }
 
   render() {
@@ -21,8 +19,8 @@ class PlayerProfileContainer extends PureComponent {
   }
 }
 
-const mapStateToProps = (state, props) => ({
-  player: state.players && Object.values(state.players).find(player => player.id === (Number(props.match.params.id))),
+const mapStateToProps = (state) => ({
+  player: state.player,
   authenticated: !!state.currentUser
 })
 

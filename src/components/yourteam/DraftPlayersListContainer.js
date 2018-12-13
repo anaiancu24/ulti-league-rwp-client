@@ -10,12 +10,11 @@ class DraftPlayersListContainer extends PureComponent {
     if (!this.props.players) {
       this.props.loadPlayers()
     }
-    
   }
 
   render() {
     return (
-      <div className="draft-player-list-container">
+      <div className="draft-players-list-container">
         <DraftPlayerList players={this.props.players}/>
       </div>
     )

@@ -4,13 +4,16 @@
   border: 1px solid white;
 }
 
-.draft-player-list-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+.draft-players-list-container {
   width: 50%;
   height: 100%;
   border: 1px solid white;
+}
+
+.draft-players-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .draft-player-card {

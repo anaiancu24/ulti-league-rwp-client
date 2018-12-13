@@ -6,12 +6,12 @@ export const PLAYERS_LOADED = 'PLAYERS_LOADED'
 
 const playerLoaded = (player) => ({
   type: PLAYER_LOADED,
-  payload: player
+  player
 })
 
 const playersLoaded = (players) => ({
   type: PLAYERS_LOADED,
-  payload: players
+  players
 })
 
 export const loadPlayer = (id) => (dispatch) => {

@@ -7,10 +7,7 @@ import { loadPlayers } from '../../actions/players'
 class PlayersOverviewContainer extends PureComponent {
 
   componentDidMount() {
-    if (!this.props.players) {
       this.props.loadPlayers()
-    }
-    
   }
 
   render() {
@@ -23,7 +20,7 @@ class PlayersOverviewContainer extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-  players: state.players && Object.values(state.players),
+  players: state.players,
   authenticated: !!state.currentUser
 })
 

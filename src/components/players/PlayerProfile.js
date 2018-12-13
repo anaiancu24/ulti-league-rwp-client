@@ -9,7 +9,6 @@ export default function PlayerProfile(props) {
         player &&
         <div>
           <h2>{player.user.firstName} {player.user.lastName}</h2>
-          <p>Plays for the {player.selectedTeam.team.name}</p>
         </div>
       }
       {
