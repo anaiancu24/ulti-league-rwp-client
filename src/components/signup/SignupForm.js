@@ -13,14 +13,16 @@ export default function SignupForm(props) {
 				<label>Email
   					<input type="email" name="email" value={props.values.email} onChange={props.onChange} />
 				</label>
-				<label> I want to be a
-  				<select value={props.values.account} name='account' onChange={props.onChange}>
-						<option selected disabled hidden style={{ display: 'none' }} value='Pick your role'>Pick your role</option>
-						<option value='player'>Player</option>
-						<option value='communityOwner'>Community Owner</option>
-						<option value='coach'>Coach</option>
-						<option value='fan'>Fan</option>
-					</select>
+				<label> I want to be a  	
+
+					<form className='account-checkbox'>
+						<input type="checkbox" name="account" value="Owner" onChange={props.onCheck}/>Owner<br />
+						<input type="checkbox" name="account" value="player" onChange={props.onCheck}/>Player<br />
+						<input type="checkbox" name="account" value="coach" onChange={props.onCheck}/>Coach <br />
+						<input type="checkbox" name="account" value="fan" onChange={props.onCheck}/>Fan <br />
+					</form>
+
+
 				</label>
 				<label>Password
   					<input type="password" name="password" value={props.values.password} onChange={props.onChange} />
