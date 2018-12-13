@@ -1,0 +1,21 @@
+.draft-selector-container {
+  width: 1500px;
+  height: 800px;
+  border: 1px solid white;
+}
+
+.draft-player-list-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 100%;
+  border: 1px solid white;
+}
+
+.draft-player-card {
+  width: 100px;
+  height: 150px;
+  background-color: black;
+
+}

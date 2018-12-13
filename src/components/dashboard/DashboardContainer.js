@@ -27,6 +27,7 @@ class DashboardContainer extends PureComponent {
 
 const mapStateToProps = (state, props) => ({
   player: state.players && Object.values(state.players).find(player => player.id === (Number(props.match.params.id))),
+  currentUser: state.currentUser,
   authenticated: !!state.currentUser
 })
 

@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import PlayersOverview from './PlayersOverview';
-import { loadPlayers } from '../../actions/players'
+import DraftPlayerList from './DraftPlayerList';
+import { loadPlayers} from '../../actions/players'
 
 
-class PlayersOverviewContainer extends PureComponent {
+class DraftPlayersListContainer extends PureComponent {
 
-  componentDidMount() {
+ componentDidMount() {
     if (!this.props.players) {
       this.props.loadPlayers()
     }
@@ -15,8 +15,8 @@ class PlayersOverviewContainer extends PureComponent {
 
   render() {
     return (
-      <div className="player-overview-container">
-        <PlayersOverview players={this.props.players}/>
+      <div className="draft-player-list-container">
+        <DraftPlayerList players={this.props.players}/>
       </div>
     )
   }
@@ -28,7 +28,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
+  //loadPlayersByTeam
   loadPlayers
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlayersOverviewContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(DraftPlayersListContainer)
