@@ -13,12 +13,8 @@ componentWillMount() {
     this.props.loadEvents()
   }
 
-
   render() {
     const { history, events } = this.props
-
-
-    console.log(events)
     return (
       <div className="home-page">
 

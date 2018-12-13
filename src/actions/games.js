@@ -17,10 +17,7 @@ const gameLoaded = (game) => ({
 export const loadGames = () => (dispatch) => {
   request
     .get(`${baseUrl}/games`)
-    .then(response => {
-      console.log(response)
-      dispatch(gamesLoaded(response.body.games))
-    })
+    .then(response => dispatch(gamesLoaded(response.body.games)))
     .catch(err => console.error(err))
 }
 

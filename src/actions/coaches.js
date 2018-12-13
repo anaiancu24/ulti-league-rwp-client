@@ -6,21 +6,18 @@ export const COACH_LOADED = 'COACH_LOADED'
 
 const coachesLoaded = (coaches) => ({
   type: COACHES_LOADED,
-  payload: coaches
+  coaches
 })
 
 const coachLoaded = (coach) => ({
   type: COACH_LOADED,
-  payload: coach
+  coach
 })
 
 export const loadCoaches = () => (dispatch) => {
   request
     .get(`${baseUrl}/coaches`)
-    .then(response => {
-      console.log(response)
-      dispatch(coachesLoaded(response.body.coaches))
-    })
+    .then(response => dispatch(coachesLoaded(response.body.coaches)))
     .catch(err => console.error(err))
 }
 

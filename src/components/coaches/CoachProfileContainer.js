@@ -6,22 +6,21 @@ import { loadCoach } from '../../actions/coaches'
 
 class CoachProfileContainer extends PureComponent {
 
-  /* componentDidMount() {
+  componentDidMount() {
     this.props.loadCoach(Number(this.props.match.params.id))
-  } */
+  }
 
   render() {
     return (
       <div className="coach-profile-container">
-        <CoachProfile />
+        <CoachProfile coach={this.props.coach} />
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  /* coach: state.coach,
-  coachId: state.coach && state.coach.id, */
+  coach: state.coach,
   authenticated: !!state.currentUser
 })
 

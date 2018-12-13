@@ -15,14 +15,14 @@ class CoachesOverviewContainer extends PureComponent {
   render() {
     return (
       <div className="coaches-overview-container">
-        <CoachesOverview />
+        <CoachesOverview coaches={this.props.coaches} />
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-
+  coaches: state.coaches,
   authenticated: !!state.currentUser
 })
 
