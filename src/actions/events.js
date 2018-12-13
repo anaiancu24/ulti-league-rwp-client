@@ -6,21 +6,18 @@ export const EVENT_LOADED = 'EVENT_LOADED'
 
 const eventsLoaded = (events) => ({
   type: EVENTS_LOADED,
-  payload: events
+  events
 })
 
 const eventLoaded = (event) => ({
   type: EVENT_LOADED,
-  payload: event
+  event
 })
 
 export const loadEvents = () => (dispatch) => {
   request
     .get(`${baseUrl}/events`)
-    .then(response => {
-      console.log(response)
-      dispatch(eventsLoaded(response.body.events))
-    })
+    .then(response => dispatch(eventsLoaded(response.body.events)))
     .catch(err => console.error(err))
 }
 

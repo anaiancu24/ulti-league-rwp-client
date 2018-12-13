@@ -15,7 +15,7 @@ catch (e) {
 export default function (state = initialState, { type, payload }) {
 	switch (type) {
 		case USER_LOGIN_SUCCESS:
-			return payload
+      return payload
     case USER_LOGOUT:
       return null
 		default:

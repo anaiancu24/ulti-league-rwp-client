@@ -6,21 +6,18 @@ export const GAME_LOADED = 'GAME_LOADED'
 
 const gamesLoaded = (games) => ({
   type: GAMES_LOADED,
-  payload: games
+  games
 })
 
 const gameLoaded = (game) => ({
   type: GAME_LOADED,
-  payload: game
+  game
 })
 
 export const loadGames = () => (dispatch) => {
   request
     .get(`${baseUrl}/games`)
-    .then(response => {
-      console.log(response)
-      dispatch(gamesLoaded(response.body.games))
-    })
+    .then(response => dispatch(gamesLoaded(response.body.games)))
     .catch(err => console.error(err))
 }
 

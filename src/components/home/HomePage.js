@@ -13,12 +13,8 @@ componentWillMount() {
     this.props.loadEvents()
   }
 
-
   render() {
     const { history, events } = this.props
-
-
-    console.log(events)
     return (
       <div className="home-page">
 
@@ -45,9 +41,8 @@ componentWillMount() {
 }
 
 const mapStateToProps = state => ({
-
   authenticated: !!state.currentUser,
-  events: state.events && Object.values(state.events)
+  events: state.events
 })
 
 const mapDispatchToProps = {

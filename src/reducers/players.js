@@ -1,16 +1,9 @@
-import { PLAYERS_LOADED, PLAYER_LOADED } from '../actions/players'
+import { PLAYERS_LOADED } from '../actions/players'
 
-export default function (state = null, {type, payload}) {
+export default function (state = null, { type, players }) {
   switch (type) {
     case PLAYERS_LOADED:
-      return payload.reduce((players, player) => {
-      players[player.id] = player
-      return players
-      }, {...state})
-    case PLAYER_LOADED:
-            return {...state, 
-              [payload.id]: payload
-            }
+      return players.map(player => ({ ...player }))
     default:
       return state
   }

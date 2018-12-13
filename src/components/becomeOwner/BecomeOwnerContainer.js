@@ -6,10 +6,6 @@ import { connect } from 'react-redux'
 
 class BecomeOwnerContainer extends PureComponent {
 
-  /* componentDidMount() {
-    this.props.loadPlayer(Number(this.props.match.params.id))
-  } */
-
   render() {
     return (
       <div className="become-owner-container">

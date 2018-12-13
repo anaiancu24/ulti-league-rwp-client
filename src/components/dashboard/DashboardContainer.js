@@ -7,9 +7,14 @@ import FollowedTeams from './FollowedTeams';
 import LeagueTable from './LeagueTable';
 import DashboardTypeCTA from './AccountTypeCTA';
 import TeamShares from './TeamShares';
+import { loadUserData } from '../../actions/users';
+import { userId } from '../../jwt'
 
 class DashboardContainer extends PureComponent {
-
+  componentDidMount() {
+    console.log(this.props.userId)
+    this.props.loadUserData(this.props.userId)
+  }
   render() {
     return (
       <div>
@@ -26,11 +31,14 @@ class DashboardContainer extends PureComponent {
 }
 
 const mapStateToProps = (state, props) => ({
-  player: state.players && Object.values(state.players).find(player => player.id === (Number(props.match.params.id))),
+  userId: state.currentUser && userId(state.currentUser.jwt),
+  userData: state.userData,
+  currentUser: state.currentUser,
   authenticated: !!state.currentUser
 })
 
 const mapDispatchToProps = {
+  loadUserData
 
 }
 
