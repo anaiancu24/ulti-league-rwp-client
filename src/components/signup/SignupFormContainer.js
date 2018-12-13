@@ -1,4 +1,4 @@
-import React, { PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
 import { signUp } from '../../actions/users'
 import SignupForm from './SignupForm'
@@ -12,7 +12,7 @@ class SignupFormContainer extends PureComponent {
 		email: '',
 		password: '',
 		confirmPassword: '',
-		account: 'Pick your role'
+		account: []
 	}
 
 	onSubmit = (event) => {
@@ -24,9 +24,8 @@ class SignupFormContainer extends PureComponent {
 			email: '',
 			password: '',
 			confirmPassword: '',
-			account: 'Pick your role'
+			account: []
 		})
-
 	}
 
 	onChange = (event) => {
@@ -35,13 +34,27 @@ class SignupFormContainer extends PureComponent {
 		})
 	}
 
+	onCheck = (event) => {
+		if (this.state.account.includes(event.target.value)) {
+			this.setState({
+				account: this.state.account.filter(account => account !== event.target.value)
+			})
+		}
+		else {
+			this.setState({
+				account: this.state.account.concat(event.target.value)
+			})
+		}
+	}
+
 
 	render() {
+	
 		if (this.props.signup.success) return (<Redirect to="/login" />)
 		return (
 			<div>
 				<h1>Sign up</h1>
-				<SignupForm onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} />
+				<SignupForm onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} onCheck={this.onCheck} />
 				<p style={{ color: 'red' }}>{this.props.signup.error}</p>
 			</div>
 		)
