@@ -6,22 +6,23 @@ import { loadTeam } from '../../actions/teams'
 
 class TeamProfileContainer extends PureComponent {
 
-  /* componentDidMount() {
-    this.props.loadTeam(Number(this.props.match.params.id))
-  } */
+  componentDidMount() {
+    if (!this.props.team) {
+      this.props.loadTeam(Number(this.props.match.params.id))
+    }
+  }
 
   render() {
     return (
       <div className="team-profile-container">
-        <TeamProfile />
+        <TeamProfile team={this.props.team}/>
       </div>
     )
   }
 }
 
-const mapStateToProps = state => ({
-  /* team: state.team,
-  teamId: state.team && state.team.id, */
+const mapStateToProps = (state,props) => ({
+  team: state.teams && Object.values(state.teams).find(team => team.id === (Number(props.match.params.id))),
   authenticated: !!state.currentUser
 })
 

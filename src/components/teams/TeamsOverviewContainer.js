@@ -8,21 +8,23 @@ import { loadTeams } from '../../actions/teams'
 
 class TeamsOverviewContainer extends PureComponent {
 
-  /* componentDidMount() {
-    this.props.loadPlayer(Number(this.props.match.params.id))
-  } */
+  componentDidMount() {
+    if (!this.props.teams) {
+      this.props.loadTeams()
+    }
+  }
 
   render() {
     return (
       <div className="teams-overview-container">
-        <TeamsOverview />
+        <TeamsOverview teams={this.props.teams} />
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-
+  teams: state.teams && Object.values(state.teams),
   authenticated: !!state.currentUser
 })
 
