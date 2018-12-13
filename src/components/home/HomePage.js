@@ -5,6 +5,7 @@ import HomePageInfo from './HomePageInfo';
 import UpdateFeed from './UpdateFeed';
 import { connect } from 'react-redux'
 import { loadEvents} from '../../actions/events'
+import HomePageSlider from './HomePageSlider'
 
 class HomePage extends PureComponent {
 
@@ -20,6 +21,11 @@ componentWillMount() {
     console.log(events)
     return (
       <div className="home-page">
+
+
+      <div>
+      <HomePageSlider />
+      </div>
             
     {
     events && events.map(event => 

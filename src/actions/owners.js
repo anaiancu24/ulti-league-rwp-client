@@ -15,15 +15,18 @@ const communityOwnerLoaded = (owner) => ({
 })
 
 export const loadOwners = () => (dispatch) => {
+  console.log('test123')
   request
-    .get(`${baseUrl}/communityowners`)
-    .then(response => dispatch(ownersLoaded(response.body.owners)))
+    .get(`${baseUrl}/owners`)
+    .then(response => {
+      console.log('test345' + response)
+      dispatch(ownersLoaded(response.body.owners))})
     .catch(err => console.error(err))
 }
 
 export const loadOwner = (id) => (dispatch) => {
   request
-    .get(`${baseUrl}/communityOwners/${id}`)
+    .get(`${baseUrl}/owners/${id}`)
     .then(response => dispatch(communityOwnerLoaded(response.body.owner)))
     .catch(err => console.error(err))
 }
