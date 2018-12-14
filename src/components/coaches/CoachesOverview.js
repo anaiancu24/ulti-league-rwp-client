@@ -9,7 +9,9 @@ export default function CoachesOverview (props) {
         <ul>
           {
             (coaches) && coaches.map(coach => {
+              console.log(coach.user)
               return (
+                
                 <li key={coach.id}>
                   <Link to={`/coaches/${coach.id}`}>{coach.user.firstName} {coach.user.lastName}</Link>
                 </li>
