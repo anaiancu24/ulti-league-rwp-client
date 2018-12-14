@@ -3,7 +3,7 @@ import * as React from 'react';
 export default function DraftPlayerList(props) {
   const { players } = props
   return (
-    <div className="draft-players-items">
+    <div className="chosen-players-items">
       {
         (players) && players.map(player => {
           return (

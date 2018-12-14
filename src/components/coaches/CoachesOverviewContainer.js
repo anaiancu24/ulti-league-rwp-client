@@ -10,9 +10,12 @@ class CoachesOverviewContainer extends PureComponent {
 
   componentDidMount() {
     this.props.loadCoaches()
+    
   }
 
   render() {
+    
+
     return (
       <div className="coaches-overview-container">
         <CoachesOverview coaches={this.props.coaches} />

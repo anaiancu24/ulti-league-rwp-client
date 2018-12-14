@@ -2,9 +2,14 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import DraftPlayerList from './DraftPlayerList';
 import { loadPlayers} from '../../actions/players'
+import PlayerPopup from './PlayerPopup'
 
 
 class DraftPlayersListContainer extends PureComponent {
+
+state = {
+  showPopup: false  
+}
 
  componentDidMount() {
     if (!this.props.players) {
@@ -12,10 +17,22 @@ class DraftPlayersListContainer extends PureComponent {
     }
   }
 
+
+ togglePopup = () => {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+
+  
+
   render() {
     return (
-      <div className="draft-players-list-container">
-        <DraftPlayerList players={this.props.players}/>
+      <div className="draft-players-list">
+        <DraftPlayerList togglePopup={this.togglePopup} players={this.props.players}/>
+        {this.state.showPopup && 
+          <PlayerPopup closePopup={this.togglePopup}/> 
+        }
       </div>
     )
   }
