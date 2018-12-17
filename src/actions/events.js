@@ -17,7 +17,11 @@ const eventLoaded = (event) => ({
 export const loadEvents = () => (dispatch) => {
   request
     .get(`${baseUrl}/events`)
-    .then(response => dispatch(eventsLoaded(response.body.events)))
+    .then(response => {
+      console.log(response.body.events)
+
+      dispatch(eventsLoaded(response.body.events))
+    })
     .catch(err => console.error(err))
 }
 

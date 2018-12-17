@@ -21,9 +21,16 @@ export const loadOwners = () => (dispatch) => {
     .catch(err => console.error(err))
 }
 
-export const loadOwner = (id) => (dispatch) => {
+export const loadOwner = () => (dispatch, getState) => {
+  const state = getState()
+  const jwt = state.currentUser.jwt
+  
   request
-    .get(`${baseUrl}/owners/${id}`)
+    .get(`${baseUrl}/owner/`)
+    .set('Authorization', `Bearer ${jwt}`)
     .then(response => dispatch(communityOwnerLoaded(response.body.owner)))
     .catch(err => console.error(err))
 }
+
+
+
