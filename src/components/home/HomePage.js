@@ -33,6 +33,10 @@ class HomePage extends PureComponent {
           <HomePageCard className="nominate-promo" tagName="nominate-tag" />
           <HomePageCard className="owner-promo" tagName="owner-tag" />
         </div>
+        <div className="draft-promo">
+          <div className="draft-header"></div>
+          <div className="be-you"></div>
+        </div>
       </div>
     )
   }
