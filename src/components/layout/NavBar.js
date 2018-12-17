@@ -39,9 +39,6 @@ const NavBar = (props) => {
           <Link to={'/dashboard'} style={{ textDecoration: "none" }}><p className='menuItem'>YOUR ULTILEAGUE</p></Link>
         }
 
-
-        <Link to={'/teams'} style={{ textDecoration: "none" }}> <p className='ulti-league'>ULTILEAGUE</p></Link>
-
       </div>
 
       <div className="search">
