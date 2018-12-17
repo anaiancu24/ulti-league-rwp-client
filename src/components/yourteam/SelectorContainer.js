@@ -9,40 +9,50 @@ class SelectorContainer extends PureComponent {
 
 state = {
   initialPlayers: [],
-  players: [] 
+  playersfiltered: []
 }
 
-componentWillMount() {
+componentDidMount() {
   if (!this.props.players) {
     this.props.loadPlayers()
   }
+  setTimeout(() => {
+    console.log(this.props.players)
+    this.setState({
+      initialPlayers: this.props.players,
+      playersfiltered: this.props.players })
+  }, 1000);
+  
 }
 
-FilterList = async (event) => {
-    await this.setState({initialPlayers: this.props.players})
-    console.log(this.props.players)
-    
-    console.log(this.state.initialPlayers)
-    console.log(event)
+
+
+
+FilterList = (event) => {
     let updatedList = this.state.initialPlayers;
     updatedList = updatedList.filter((player) => {
-      return player.location.toLowerCase().search(
+        return player.location.toLowerCase().search(
         event.target.value.toLowerCase()) !== -1;
     });
-    this.setState({players: updatedList});
+    console.log(updatedList)
+    this.setState({playersfiltered: updatedList});
+    
   }
 
   render() {
+     
+    console.log(this.state.initialPlayers)
+
     return (
       <div className="selectorbox-container">
         <div className='draft-list-container'>
           <div className="draft-filter">
             <input type="checkbox" /> Males
             <input type="checkbox" /> Females
-            <DraftListSearch players={this.props.players} FilterList={this.FilterList}/>
+            <DraftListSearch  FilterList={this.FilterList}/>
             <button>Sort by Alphabet</button>
           </div>
-          <DraftListContainer players={this.state.players}/>
+          <DraftListContainer players={this.state.playersfiltered}/>
         </div>
         <div className='selected-list-container'>
           <div className='selected-title'>

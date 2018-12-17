@@ -36,7 +36,7 @@ state = {
 }
 
 const mapStateToProps = state => ({
-  players: state.players && Object.values(state.players),
+  // players: state.players && Object.values(state.players),
   authenticated: !!state.currentUser
 })
 
