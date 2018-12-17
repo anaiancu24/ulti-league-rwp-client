@@ -9,16 +9,45 @@ import DashboardTypeCTA from './AccountTypeCTA';
 import TeamShares from './TeamShares';
 import { loadUserData } from '../../actions/users';
 import { userId } from '../../jwt'
+import YouTube from 'react-youtube'
 
 class DashboardContainer extends PureComponent {
   componentDidMount() {
     console.log(this.props.userId)
     this.props.loadUserData(this.props.userId)
   }
+
+
+
+
+  onReady(event) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
+
   render() {
+
+
+
+    const opts = {
+      height: '390',
+      width: '640',
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 0
+      }
+    };
+  
+
     return (
       <div>
         <h1>Dashboard</h1>
+
+         <YouTube
+        videoId="2g811Eo7K8U"
+        opts={opts}
+        onReady={this.onReady}
+      />
+
         <YourUpComingEvents />
         <PersonalNewsFeed />
         <FollowedTeams />

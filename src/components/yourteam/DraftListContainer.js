@@ -5,17 +5,17 @@ import { loadPlayers} from '../../actions/players'
 import PlayerPopup from './PlayerPopup'
 
 
-class DraftContainer extends PureComponent {
+class DraftListContainer extends PureComponent {
 
 state = {
   showPopup: false  
 }
 
- componentDidMount() {
-    if (!this.props.players) {
-      this.props.loadPlayers()
-    }
-  }
+//  componentDidMount() {
+//     if (!this.props.players) {
+//       this.props.loadPlayers()
+//     }
+//   }
 
  togglePopup = () => {
     this.setState({
@@ -41,8 +41,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  //loadPlayersByTeam
   loadPlayers
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DraftContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(DraftListContainer)
