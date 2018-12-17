@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import ChosenPlayerList from './DraftPlayerList';
+import SelectedList from './SelectedList';
 import { loadPlayers} from '../../actions/players'
 
 
-class ChosenPlayersListContainer extends PureComponent {
+class SelectedListContainer extends PureComponent {
 
  componentDidMount() {
     if (!this.props.players) {
@@ -14,8 +14,8 @@ class ChosenPlayersListContainer extends PureComponent {
 
   render() {
     return (
-      <div className='chosen-players-list' >
-        <ChosenPlayerList players={this.props.players}/>
+      <div className='selected-list' >
+        <SelectedList players={this.props.players}/>
       </div>
     )
   }
@@ -31,4 +31,4 @@ const mapDispatchToProps = {
   loadPlayers
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ChosenPlayersListContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(SelectedListContainer)

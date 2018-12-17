@@ -11,7 +11,7 @@ export default function LoginForm(props) {
   				<label> Password
             <input type="password" name="password" value={props.values.password} onChange={props.onChange } />
           </label>
-  				<button type="submit">Login</button>
+  				<button className='login-form-button' type="submit">Login</button>
   			</form>
 		  </div>)
 	}
