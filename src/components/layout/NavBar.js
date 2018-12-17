@@ -3,6 +3,8 @@ import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import './NavBar.css'
+import logo from '../../images/LOGO.png'
+import searchIcon from '../../images/SearchIcon.png'
 
 
 const NavBar = (props) => {
@@ -10,28 +12,38 @@ const NavBar = (props) => {
 
   return (
     <div className="menu">
-      <input type="text" placeholder="Search..."></input>
-      <Link to={'/coaches'}> <p className='menuItem'>Coaches</p></Link>
-      <Link to={'/communityowners'}> <p className='menuItem'>Community Owners</p></Link>
-      <Link to={'/yourteam'}> <p className='menuItem'>Your Team</p></Link>
+      <div className="search">
+        <input type="text" placeholder="..."></input>
+        <img src={searchIcon} alt="search-icon"></img>
+      </div>
+
       {
         !authenticated &&
-        <Link to={'/login'}><p className='menuItem' style={{ float: 'right' }}> Login</p></Link>
-      }
-      {
-        !authenticated &&
-        <Link to={'/signup'}><p className='menuItem' style={{ float: 'right' }} >Signup</p></Link>
+        <div className="dropdown">
+          <button class="dropbtn">LOG IN / SIGN UP
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <Link to={'/login'} style={ { textDecoration: "none"} }><p> LOG IN</p></Link>
+            <Link to={'/signup'} style={ { textDecoration: "none"} }><p> SIGN UP</p></Link>
+          </div>
+        </div>
       }
       {
         authenticated &&
-        <Link to={'/Myaccount'}><p className='menuItem' style={{ float: 'right' }}>My account</p></Link>
+        <Link to={'/Myaccount'}><p className='menuItem'>YOUR ULTILEAGUE</p></Link>
       }
       {
         authenticated &&
-        <Link to={'/logout'}><p className='menuItem' style={{ float: 'right' }}>Logout</p></Link>
+        <Link to={'/logout'}><p className='menuItem'>Logout</p></Link>
       }
 
-      <div className="logo" onClick={() => props.history.push('/')}></div>
+      <Link to={'/teams'} style={ { textDecoration: "none"} }> <p className='menuItem'>ULTILEAGUE</p></Link>
+
+      <div className="logo" onClick={() => props.history.push('/')}>
+        <img src={logo} alt="ulti-league-logo"></img>
+      </div>
+
     </div>
 
 
