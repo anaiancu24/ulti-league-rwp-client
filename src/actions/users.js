@@ -69,8 +69,12 @@ export const signUp = (data) => (dispatch) =>
 			}
 		})
 
-export const loadUserData = (id) => (dispatch) =>
+export const loadUserData = () => (dispatch, getState) => {
+	const state = getState()
+	const jwt = state.currentUser.jwt
 	request
-		.get(`${baseUrl}/users/${id}`)
+		.get(`${baseUrl}/user`)
+		.set('Authorization', `Bearer ${jwt}`)
 		.then(response => dispatch(userDataLoaded(response.body.user)))
 		.catch(err => console.error(err))
+}

@@ -29,13 +29,14 @@ const NavBar = (props) => {
             </div>
           </div>
         }
+      
         {
           authenticated &&
           <Link to={'/logout'} style={{ textDecoration: "none" }}><p className='menuItem'>LOGOUT</p></Link>
         }
         {
           authenticated &&
-          <Link to={'/Myaccount'} style={{ textDecoration: "none" }}><p className='menuItem'>YOUR ULTILEAGUE</p></Link>
+          <Link to={'/dashboard'} style={{ textDecoration: "none" }}><p className='menuItem'>YOUR ULTILEAGUE</p></Link>
         }
 
 
