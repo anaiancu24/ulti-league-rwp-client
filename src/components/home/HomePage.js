@@ -5,7 +5,6 @@ import HomePagePromo from './HomePagePromo';
 import UpdateFeed from './UpdateFeed';
 import { connect } from 'react-redux'
 import { loadEvents } from '../../actions/events'
-import HomePageSlider from './HomePageSlider'
 import HomePageCard from './HomePageCard';
 
 class HomePage extends PureComponent {
@@ -24,10 +23,9 @@ class HomePage extends PureComponent {
         <div className="promo">
           <HomePagePromo />
           <HomePageCard className="support-team-promo" tagName="support-team-tag"/>
+          <HomePageCard className="join-and-play-promo" tagName="join-and-play-tag" />
+          <HomePageCard className="support-players-promo" tagName="support-players-tag" />
         </div>
-
-
-        <HomePageCard className="support-teams-card" tagText="Support Teams" />
       </div>
     )
   }
