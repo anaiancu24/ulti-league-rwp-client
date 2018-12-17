@@ -1,30 +1,87 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import YourUpComingEvents from './YourUpComingEvents';
-import './Dashboard.css'
+import './Dashboard2.css'
 import PersonalNewsFeed from './PersonalNewsFeed';
 import FollowedTeams from './FollowedTeams';
 import LeagueTable from './LeagueTable';
-import DashboardTypeCTA from './AccountTypeCTA';
+// import DashboardTypeCTA from './AccountTypeCTA';
 import TeamShares from './TeamShares';
+import DraftSelection from './DraftSelection'
 import { loadUserData } from '../../actions/users';
 import { userId } from '../../jwt'
+import YouTube from 'react-youtube'
 
 class DashboardContainer extends PureComponent {
   componentDidMount() {
     console.log(this.props.userId)
     this.props.loadUserData(this.props.userId)
   }
+
+
+
+
+  onReady(event) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
+
   render() {
+
+
+
+    const opts = {
+      height: '200',
+      width: '550',
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 0
+      }
+    };
+  
+
     return (
-      <div>
-        <h1>Dashboard</h1>
-        <YourUpComingEvents />
-        <PersonalNewsFeed />
+      <div className='dashboard'>
+
+      <div className='youtube'>
+         <YouTube
+        videoId="2g811Eo7K8U"
+        opts={opts}
+        onReady={this.onReady}
+      />
+      </div>
+
+      <div className='draft'>
+        <DraftSelection />
+        </div>  
+
+        <div className='teams'>
         <FollowedTeams />
+        </div>
+
+        <div className='league'>
         <LeagueTable />
+        </div>
+
+        <div className="events">
+        <YourUpComingEvents />
+        </div>
+
+        <div className="newsfeed">
+        <PersonalNewsFeed />
+        </div>
+        
+
+       
+     
+        {/* <div className='cta'>
         <DashboardTypeCTA />
+        </div> */}
+
+        <div className='shares'>
         <TeamShares />
+        </div> 
+
+        
       </div>
     )
   }

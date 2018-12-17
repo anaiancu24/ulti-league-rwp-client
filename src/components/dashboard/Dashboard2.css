@@ -1,0 +1,113 @@
+h1 {
+margin-left: 10px;}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .dashboard {
+   
+    margin-top: 50px;
+    padding: 50px;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(3, 550px);
+    grid-template-rows: repeat(8,200px);
+    align-content: space-around;
+    justify-content: space-between;
+    background-color: whitesmoke;
+
+
+  }
+  
+  .draft {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    background-color: #C6C6CF;
+    -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+-moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+
+  
+  
+  
+  }
+  
+  .youtube {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    background-color: #C6C6CF;
+    -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+-moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    
+
+  }
+  
+  .teams {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    background-color: #C6C6CF;
+    -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+-moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+
+  
+  }
+  
+  .league {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    background-color: #C6C6CF;
+    -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+-moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+
+  
+  }
+  
+  .events {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    background-color: #C6C6CF;
+    -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+-moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+
+  }
+  
+  .newsfeed {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  
+    background-color: #C6C6CF;
+    -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+-moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+  }
+  
+  .shares {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  
+    grid-row-start: 6;
+    grid-row-end: 7;
+  
+    background-color: #C6C6CF;
+    -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+  
+  }
+  
