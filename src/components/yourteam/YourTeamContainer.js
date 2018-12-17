@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import DraftSelectorContainer from './DraftSelectorContainer';
+import SelectorContainer from './SelectorContainer';
 
-const nominatedPlayers = [['henk'],['willem'],['frits'],['banana']]
+
 
 
 class YourTeamContainer extends PureComponent {
@@ -23,7 +23,7 @@ class YourTeamContainer extends PureComponent {
         <h2>Add players</h2>
         <h2>Change players</h2>
        
-        <DraftSelectorContainer />
+        <SelectorContainer />
         <button>Vote</button> 
       </div>
     )

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { login } from '../../actions/users'
 import LoginForm from './LoginForm'
 import { Redirect } from 'react-router-dom'
+import './Login.css'
 
 class LoginFormContainer extends PureComponent {
 	state = {
@@ -34,8 +35,8 @@ class LoginFormContainer extends PureComponent {
 		)
 
 		return (
-			<div>
-				<h1>Login</h1>
+			<div className='login-form-container'>
+				<p>Login</p>
 				<LoginForm onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} />
 				{this.props.error &&
 					<span style={{ color: 'red' }}>{this.props.error}</span>}

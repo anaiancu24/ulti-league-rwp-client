@@ -1,0 +1,159 @@
+/* containers - general */
+
+.selectorbox-container {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center
+}
+
+/* containers - draft */
+.draft-list-container {
+  width: 45%;
+  min-width: 400px;
+  height: 800px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.draft-filter {
+  height: 8%;
+  width: 100%;
+  font-size: 0.5em;
+  border: 1px solid white;
+  color: black;
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;  
+}
+
+.draft-list {
+  display:flex;
+  background: green;
+  height: 92%
+}
+
+.draft-box {
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  background: #aaa;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%
+}
+
+/* containers - selected */
+
+.selected-title {
+  width: 100%;
+  height: 8%;
+  color: black;
+  background: white
+}
+
+.selected-list-container {
+  width: 45%;
+  min-width: 400px;
+  height: 800px;
+  border: 1px solid white;
+  display:flex;
+  background:blue;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.selected-list {
+  display:flex;
+  background: green;
+  height: 73%;
+  width: 95%
+}
+
+
+.selected-box {
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: green ;
+  width: 100%;
+  height: 100%
+}
+
+
+.selected-stats-area {
+  width: 100%;
+  height: 7%;
+  display:flex;
+  flex: wrap;
+  justify-content: space-around;
+}
+
+.selected-save-area {
+  width: 100%;
+  height: 5%;
+  display:flex;
+  flex: wrap;
+  justify-content: center;
+}
+
+
+
+
+/* LOADING OF PLAYERS */
+
+
+.draft-item {
+  width: 150px;
+  height: 230px;
+  background-color: white;
+  color: black;
+  margin: 20px;
+  margin-top: 20px;
+}
+
+.selected-item {
+  width: 100px;
+  height: 150px;
+  background-color: white;
+  color: black;
+  margin: 20px;
+  margin-top: 20px;
+}
+
+
+
+/* photos and buttons */
+
+.draft-player-photo {
+  width: 150px;
+  height: 100px;
+}
+
+.draft-add-button {
+  position:relative;
+  z-index: 1;
+  top: -20px;
+  left: 80px
+}
+
+
+.remove-selected-player-button {
+  position:relative;
+  z-index: 1;
+  top: -75px;
+  left: 80px
+}
+
+.selected-player-photo {
+  width: 60px;
+  height: 80px;
+}
+
