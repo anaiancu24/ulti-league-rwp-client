@@ -5,11 +5,9 @@ import { connect } from 'react-redux'
 
 const Footer = (props) => {
   return (
-    <ul>
-      <li><a href='/home'>Home</a></li>
-      <li><a href='/'>Dummy</a></li>
-      <li><a href='/'>Dummy</a></li>
-    </ul>
+    <div className="footer">
+      <h3>Contact</h3>
+    </div>
   )
 }
 

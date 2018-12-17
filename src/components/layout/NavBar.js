@@ -9,28 +9,31 @@ const NavBar = (props) => {
   const { authenticated } = props
 
   return (
-      <ul className='menu'>
-        <Link to={'/'}> <li className='menuItem'>Home</li></Link>
-        <Link to={'/coaches'}> <li className='menuItem'>Coaches</li></Link>
-        <Link to={'/communityowners'}> <li className='menuItem'>Community Owners</li></Link>
-        <Link to={'/yourteam'}> <li className='menuItem'>Your Team</li></Link>
-        {
-          !authenticated &&
-          <Link to={'/login'}><li className='menuItem' style={{ float: 'right' }}> Login</li></Link>
-        }
-        {
-          !authenticated &&
-          <Link to={'/signup'}><li className='menuItem' style={{ float: 'right' }} >Signup</li></Link>
-        }
-        {
-          authenticated &&
-          <Link to={'/Myaccount'}><li className='menuItem' style={{ float: 'right' }}>My account</li></Link>
-        }
-        {
-          authenticated &&
-          <Link to={'/logout'}><li className='menuItem' style={{ float: 'right' }}>Logout</li></Link>
-        }
-      </ul>
+    <div className="menu">
+      <input type="text" placeholder="Search..."></input>
+      <Link to={'/coaches'}> <p className='menuItem'>Coaches</p></Link>
+      <Link to={'/communityowners'}> <p className='menuItem'>Community Owners</p></Link>
+      <Link to={'/yourteam'}> <p className='menuItem'>Your Team</p></Link>
+      {
+        !authenticated &&
+        <Link to={'/login'}><p className='menuItem' style={{ float: 'right' }}> Login</p></Link>
+      }
+      {
+        !authenticated &&
+        <Link to={'/signup'}><p className='menuItem' style={{ float: 'right' }} >Signup</p></Link>
+      }
+      {
+        authenticated &&
+        <Link to={'/Myaccount'}><p className='menuItem' style={{ float: 'right' }}>My account</p></Link>
+      }
+      {
+        authenticated &&
+        <Link to={'/logout'}><p className='menuItem' style={{ float: 'right' }}>Logout</p></Link>
+      }
+
+      <div className="logo" onClick={() => props.history.push('/')}></div>
+    </div>
+
 
   )
 }

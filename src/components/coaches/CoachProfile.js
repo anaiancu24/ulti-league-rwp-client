@@ -5,7 +5,7 @@ export default function PlayerProfile(props) {
   return (
   <div className="coach-profile">
     { coach &&
-      <p>This is the profile of ${coach.user.firstName}  ${coach.user.lastName}!</p>
+      <p>This is the profile of {coach.user.firstName}  {coach.user.lastName}!</p>
     }
     {
       !coach && 'Loading...'

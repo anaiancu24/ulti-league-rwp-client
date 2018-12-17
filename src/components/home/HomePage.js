@@ -1,15 +1,16 @@
-import React, { PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import HomePageBanner from './HomePageBanner'
 import './HomePageStyles.css';
-import HomePageInfo from './HomePageInfo';
+import HomePagePromo from './HomePagePromo';
 import UpdateFeed from './UpdateFeed';
 import { connect } from 'react-redux'
-import { loadEvents} from '../../actions/events'
+import { loadEvents } from '../../actions/events'
 import HomePageSlider from './HomePageSlider'
+import HomePageCard from './HomePageCard';
 
 class HomePage extends PureComponent {
 
-componentWillMount() {
+  componentWillMount() {
     this.props.loadEvents()
   }
 
@@ -17,24 +18,16 @@ componentWillMount() {
     const { history, events } = this.props
     return (
       <div className="home-page">
+        <div className="hero">
+          <HomePageBanner />
+        </div>
+        <div className="promo">
+          <HomePagePromo />
+          <HomePageCard className="support-team-promo" tagName="support-team-tag"/>
+        </div>
 
 
-      <div>
-      <HomePageSlider />
-      </div>
-            
-    {
-    events && events.map(event => 
-    <div key={event.id}><h1>Event name: {event.name}</h1> 
-    {event.games.map(game => 
-    <h2 key={game.id}>Game date: {game.date}</h2>)} </div>)}
-        <HomePageBanner />
-        <button onClick={() => history.push('/coaches/1')}>Coach Profile Test</button>
-        <button onClick={() => history.push('/teams/1')}>Team Profile Test</button>
-        <button onClick={() => history.push('/players/1')}>Player Profile Test</button>
-        <button onClick={() => history.push('/communityowners/1')}>Community Owner Profile Test</button>
-        <HomePageInfo />
-        <UpdateFeed />
+        <HomePageCard className="support-teams-card" tagText="Support Teams" />
       </div>
     )
   }
