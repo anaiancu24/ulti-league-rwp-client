@@ -8,18 +8,24 @@ import LeagueTable from './LeagueTable';
 // import DashboardTypeCTA from './AccountTypeCTA';
 import TeamShares from './TeamShares';
 import DraftSelection from './DraftSelection'
-import { loadUserData } from '../../actions/users';
+import { loadEvents } from '../../actions/events';
+import { loadOwner } from '../../actions/owners';
+import { loadUserData} from '../../actions/users'
 import { userId } from '../../jwt'
 import YouTube from 'react-youtube'
 
 class DashboardContainer extends PureComponent {
-  componentDidMount() {
-    console.log(this.props.userId)
-    this.props.loadUserData(this.props.userId)
+
+  componentWillMount() {
+    this.props.loadEvents()
+    this.props.loadOwner()
+    this.props.loadUserData()
   }
 
-
-
+  onReady(event) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
 
   onReady(event) {
     // access to player in all event handlers via event.target
@@ -27,9 +33,6 @@ class DashboardContainer extends PureComponent {
   }
 
   render() {
-
-
-
     const opts = {
       height: '100%',
       width: '100%',
@@ -37,17 +40,17 @@ class DashboardContainer extends PureComponent {
         autoplay: 0
       }
     };
-  
-
     return (
       <div className='dashboard'>
 
       <div className='youtube'>
+
          <YouTube
         videoId="2g811Eo7K8U"
         opts={opts}
         onReady={this.onReady}
       />
+
       </div>
 
       <div className='draft'>
@@ -55,6 +58,9 @@ class DashboardContainer extends PureComponent {
         </div>  
 
         <div className='teams'>
+        <YourUpComingEvents />
+        <PersonalNewsFeed />
+
         <FollowedTeams />
         </div>
 
@@ -69,9 +75,6 @@ class DashboardContainer extends PureComponent {
         <div className="newsfeed">
         <PersonalNewsFeed />
         </div>
-        
-
-       
      
         {/* <div className='cta'>
         <DashboardTypeCTA />
@@ -81,7 +84,9 @@ class DashboardContainer extends PureComponent {
         <TeamShares />
         </div> 
 
-        
+          {this.props.events && <p>{this.props.events[0].name}</p> }
+          {this.props.owner && <p>{this.props.owner.shares}</p> }
+          {this.props.userData && <p>{this.props.userData.firstName}</p> }
       </div>
     )
   }
@@ -91,10 +96,15 @@ const mapStateToProps = (state, props) => ({
   userId: state.currentUser && userId(state.currentUser.jwt),
   userData: state.userData,
   currentUser: state.currentUser,
-  authenticated: !!state.currentUser
+  authenticated: !!state.currentUser,
+  events: state.events,
+  owner: state.owner,
+  
 })
 
 const mapDispatchToProps = {
+  loadEvents,
+  loadOwner,
   loadUserData
 
 }

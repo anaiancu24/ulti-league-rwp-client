@@ -30,7 +30,7 @@ export default function Routes() {
       <Route exact path="/coaches" component={CoachesOverviewContainer} />
       <Route exact path="/communityowners" component={OwnerOverviewContainer} />
       <Route exact path="/teams" component={TeamsOverviewContainer} />
-      <Route exact path="/myaccount" component={DashboardContainer} />
+      <Route exact path="/dashboard" component={DashboardContainer} />
       <Route exact path="/yourteam" component={YourTeamContainer} />
     </div>
   )
