@@ -3,7 +3,7 @@ import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import './NavBar.css'
-// import logo from '../../images/LOGO.png'
+import logo from '../../images/LOGO.png'
 import searchIcon from '../../images/SearchIcon.png'
 
 
