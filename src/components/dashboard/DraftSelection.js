@@ -23,17 +23,17 @@ export default function DraftSelection(props) {
       <div>
       <div className='datas'>
           <div className='inline'>
-      <h2>5<span className="smaller">/14</span></h2>
+      <h2 className='numbers'>5<span className="smaller">/14</span></h2>
       <p>Players selected</p>
       </div>
 
       <div className='inline'>
-      <h2>06</h2>
+      <h2 className='numbers'>06</h2>
       <p>Days left</p>
       </div>
 
       <div className='inline'>
-      <h2>13%</h2>
+      <h2 className='numbers'>13%</h2>
       <p>Your shares</p>
       </div>
       </div>

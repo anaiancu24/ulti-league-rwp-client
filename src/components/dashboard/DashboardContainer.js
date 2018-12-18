@@ -33,7 +33,7 @@ class DashboardContainer extends PureComponent {
 
     const opts = {
       height: '80%',
-      width: '100%',
+      width: '80%',
       playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 0
       }
@@ -43,13 +43,16 @@ class DashboardContainer extends PureComponent {
     return (
       <div className='dashboard'>
       <div className='youtube'>
-      <button className="label">Latest vodeos</button>
+      <button className="label">Latest videos</button>
 
+<div className="ytbox">
          <YouTube
         videoId="2g811Eo7K8U"
         opts={opts}
         onReady={this.onReady}
       />
+      </div>
+      
       </div>
 
       <div className='draft'>
@@ -71,7 +74,7 @@ class DashboardContainer extends PureComponent {
         <div className="newsfeed">
         <PersonalNewsFeed />
         </div>
-        
+
         <div className="spiritholder">
         <SpiritHolder />
         
