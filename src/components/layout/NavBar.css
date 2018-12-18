@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
+}
 
 nav {
   position: fixed;
@@ -100,7 +101,7 @@ nav {
   font-weight: 600;
   border: none;
   outline: none;
-  color: white;
+  color: #F8FAF9;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -117,7 +118,7 @@ nav {
 
 .dropdown-content p {
   float: none;
-  color: white;
+  color: #F8FAF9;;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -127,7 +128,7 @@ nav {
 .menu p:hover, .dropdown:hover .dropbtn, .ulti-league:hover {
   background-color: #00575b;
   display: block;
-  color: white;
+  color: #F8FAF9;
 }
 
 .dropdown:hover .dropdown-content {
