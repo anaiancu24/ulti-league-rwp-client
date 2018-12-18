@@ -6,12 +6,12 @@ export const OWNER_LOADED = 'OWNER_LOADED'
 
 const ownersLoaded = (owners) => ({
   type: OWNERS_LOADED,
-  payload: owners
+  owners
 })
 
 const communityOwnerLoaded = (owner) => ({
   type: OWNER_LOADED,
-  payload: owner
+  owner
 })
 
 export const loadOwners = () => (dispatch) => {
