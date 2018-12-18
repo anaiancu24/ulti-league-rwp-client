@@ -14,6 +14,7 @@ import event from './event'
 import games from './games'
 import game from './game'
 import userData from './userData'
+import availablePlayers from './availablePlayers'
 
 export default combineReducers({
   players,
@@ -31,5 +32,6 @@ export default combineReducers({
   userData,
   signup,
   login,
+  availablePlayers
   
 })

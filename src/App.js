@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import NavBar from './components/layout/NavBar'
 import Footer from './components/layout/Footer'
 import Routes from './components/Routes'
@@ -10,15 +10,11 @@ class App extends PureComponent {
     return (
       <BrowserRouter>
         <div className="App">
-          <nav>
-            <NavBar />
-          </nav>
+          <NavBar />
           <main>
-          <Routes />
+            <Routes />
           </main>
-          <footer>
-            <Footer />
-          </footer>
+          <Footer />
         </div>
       </BrowserRouter>
     );

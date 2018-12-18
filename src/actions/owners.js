@@ -6,12 +6,12 @@ export const OWNER_LOADED = 'OWNER_LOADED'
 
 const ownersLoaded = (owners) => ({
   type: OWNERS_LOADED,
-  payload: owners
+  owners
 })
 
 const communityOwnerLoaded = (owner) => ({
   type: OWNER_LOADED,
-  payload: owner
+  owner
 })
 
 export const loadOwners = () => (dispatch) => {
@@ -21,9 +21,16 @@ export const loadOwners = () => (dispatch) => {
     .catch(err => console.error(err))
 }
 
-export const loadOwner = (id) => (dispatch) => {
+export const loadOwner = () => (dispatch, getState) => {
+  const state = getState()
+  const jwt = state.currentUser.jwt
+  
   request
-    .get(`${baseUrl}/owners/${id}`)
+    .get(`${baseUrl}/owner/`)
+    .set('Authorization', `Bearer ${jwt}`)
     .then(response => dispatch(communityOwnerLoaded(response.body.owner)))
     .catch(err => console.error(err))
 }
+
+
+
