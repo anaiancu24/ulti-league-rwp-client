@@ -1,6 +1,7 @@
 /* containers - general */
 
 .your-team-container {
+    margin-top: 250px;
     display: grid;
     grid-template: repeat(5, 100vh) / 50px 1fr 50px;
 }
@@ -8,7 +9,7 @@
 .selectorbox-container {
   display:flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center
 }
 
@@ -45,7 +46,7 @@
 .draft-box {
   display:flex;
   justify-content: space-around;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   flex: 1;
   background: #aaa;

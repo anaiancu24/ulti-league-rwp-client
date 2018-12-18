@@ -15,6 +15,7 @@ import games from './games'
 import game from './game'
 import userData from './userData'
 import availablePlayers from './availablePlayers'
+import owner from './owner'
 
 export default combineReducers({
   players,
@@ -24,6 +25,7 @@ export default combineReducers({
   games,
   game,
   owners,
+  owner,
   teams,
   team,
   events,

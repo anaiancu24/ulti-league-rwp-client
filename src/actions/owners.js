@@ -9,7 +9,7 @@ const ownersLoaded = (owners) => ({
   owners
 })
 
-const communityOwnerLoaded = (owner) => ({
+const ownerLoaded = (owner) => ({
   type: OWNER_LOADED,
   owner
 })
@@ -28,7 +28,7 @@ export const loadOwner = () => (dispatch, getState) => {
   request
     .get(`${baseUrl}/owner/`)
     .set('Authorization', `Bearer ${jwt}`)
-    .then(response => dispatch(communityOwnerLoaded(response.body.owner)))
+    .then(response => dispatch(ownerLoaded(response.body.owner)))
     .catch(err => console.error(err))
 }
 
