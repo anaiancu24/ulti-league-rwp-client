@@ -1,3 +1,9 @@
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+
 nav {
   position: fixed;
   top: 0;

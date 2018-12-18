@@ -3,16 +3,17 @@ import { connect } from 'react-redux'
 import YourUpComingEvents from './YourUpComingEvents';
 import './Dashboard2.css'
 import PersonalNewsFeed from './PersonalNewsFeed';
-import FollowedTeams from './FollowedTeams';
+//import FollowedTeams from './FollowedTeams';
 import LeagueTable from './LeagueTable';
 // import DashboardTypeCTA from './AccountTypeCTA';
-import TeamShares from './TeamShares';
+//import TeamShares from './TeamShares';
 import DraftSelection from './DraftSelection'
 import { loadEvents } from '../../actions/events';
 import { loadOwner } from '../../actions/owners';
 import { loadUserData} from '../../actions/users'
 import { userId } from '../../jwt'
 import YouTube from 'react-youtube'
+import SpiritHolder from './SpiritHolder';
 
 class DashboardContainer extends PureComponent {
 
@@ -34,17 +35,19 @@ class DashboardContainer extends PureComponent {
 
   render() {
     const opts = {
-      height: '100%',
-      width: '100%',
+      height: '80%',
+      width: '80%',
       playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 0
       }
     };
     return (
       <div className='dashboard'>
-
       <div className='youtube'>
 
+      <button className="label">Latest videos</button>
+
+<div className="ytbox">
          <YouTube
         videoId="2g811Eo7K8U"
         opts={opts}
@@ -52,17 +55,20 @@ class DashboardContainer extends PureComponent {
       />
 
       </div>
+      
+      </div>
 
       <div className='draft'>
         <DraftSelection />
         </div>  
 
+        {/* <div className='teams'>
         <div className='teams'>
         <YourUpComingEvents />
         <PersonalNewsFeed />
 
         <FollowedTeams />
-        </div>
+        </div> */}
 
         <div className='league'>
         <LeagueTable />
@@ -75,14 +81,22 @@ class DashboardContainer extends PureComponent {
         <div className="newsfeed">
         <PersonalNewsFeed />
         </div>
+
+
+        <div className="spiritholder">
+        <SpiritHolder />
+        
+        </div>
+
+
      
         {/* <div className='cta'>
         <DashboardTypeCTA />
         </div> */}
 
-        <div className='shares'>
+        {/* <div className='shares'>
         <TeamShares />
-        </div> 
+        </div>  */}
 
           {this.props.events && <p>{this.props.events[0].name}</p> }
           {this.props.owner && <p>{this.props.owner.shares}</p> }

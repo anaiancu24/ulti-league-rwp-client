@@ -1,5 +1,22 @@
 h1 {
-margin-left: 10px;}
+margin-left: 10px;
+color: #4F4F4F;
+font-size: 36px;
+font-weight:bold;
+
+}
+
+h2 {
+  color: #4F4F4F;
+  font-size: 50px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  }
+
+p{
+  color: #4F4F4F;
+  font-size: 20px;
+}
 
 table {
     font-family: arial, sans-serif;
@@ -13,16 +30,14 @@ table {
     padding: 8px;
   }
   
-  .dashboard {
-   
+  .dashboard {   
     margin-top: 50px;
-    padding: 50px;
+    padding: 30px;
     display: grid;
-    grid-gap: 50px;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: repeat(8,200px);
-    align-content: space-around;
-    justify-content: space-between;
+    grid-gap: 40px;
+    grid-template-columns: repeat(3, 500px);
+    grid-template-rows: repeat(8,320px);
+    justify-content: center;
     background-color: whitesmoke;
 
 
@@ -31,7 +46,10 @@ table {
   .draft {
     grid-column-start: 1;
     grid-row-start: 1;
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
+    border-radius: 4px;
+
+    
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
@@ -44,33 +62,36 @@ table {
   .youtube {
     grid-column-start: 1;
     grid-row-start: 2;
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
-    
+    border-radius: 4px;
+
 
   }
   
   .teams {
     grid-column-start: 1;
     grid-row-start: 3;
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    border-radius: 4px;
 
   
   }
   
   .league {
     grid-column-start: 1;
-    grid-row-start: 4;
-    grid-row-end: 6;
-    background-color: #C6C6CF;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    border-radius: 4px;
 
   
   }
@@ -78,25 +99,43 @@ table {
   .events {
     grid-column-start: 2;
     grid-row-start: 1;
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    border-radius: 4px;
 
   }
+  .spiritholder {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    background-color: #F8FAF9;
+    -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    border-radius: 4px;
+
+  }
+  
   
   .newsfeed {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 4;
-  
-    background-color: #C6C6CF;
+    border-radius: 4px;
+
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
   }
-  
+  .dashboard-news {
+    margin-top: 20px;
+    overflow: scroll;
+    max-height: 600px;
+
+  }
   .shares {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -104,10 +143,145 @@ table {
     grid-row-start: 6;
     grid-row-end: 7;
   
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
-  
+    border-radius: 4px;
+
   }
   
+  .bullet {
+    position: relative;  
+    width: 27px;
+    height:27px;
+    margin-right: 10px;
+    margin-left:20px;
+
+    
+    }
+    
+    .titletext {
+        font-size: 36px;
+        color: #4F4F4F;
+        font-weight:bold;
+
+    } 
+    
+    .title {
+        display: inline-block;
+        margin-top: -20px;
+        font-weight:bold;
+
+    
+    }
+
+    .button2 {
+      position: relative;
+      margin-left:20%;
+      margin-right: 20%;
+      width: 60%;
+      height:60px;
+      font-weight:bold;
+
+/* margin-left: 70%;
+width: 258px;
+height: 56px;
+left: 114px;
+top: 319px; */
+background: #FF887A;
+/* DashBoardDropShadow */
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-top-left-radius:20px;
+margin-top: -40px;
+text-align: center;
+color: #F8FAF9;
+font-size: 18px;
+font-style: bold;
+margin-top: 20px;
+    }
+
+.spirittext {
+text-align: center;
+color: #4F4F4F;
+font-size: 30px;
+margin-left: 5%;
+margin-right: 5%;
+font-weight:bold;
+
+}
+
+ul {
+  list-style: none
+}
+
+.inline {
+display: inline-block
+}
+
+
+p {
+  margin-top: 10px;
+  text-align: center
+}
+.insidebox {
+  -webkit-box-shadow: inset 0px 6px 14px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 6px 14px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 6px 14px 2px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.label {
+  width: 220px;
+  height: 60px;
+  left: -0.93px;
+  top: -14px;
+  border-radius:5px;
+  background: #007D83;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: -20px;
+  margin-top: -70px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight:bold;
+
+
+}
+
+.matches {
+  margin-left: 10%;
+  margin-right:10%;
+  width:80%;
+  height: 180px;
+  margin-bottom: 10%
+
+}
+
+.leagues {
+  margin-left: 10%;
+  margin-right:10%;
+  width:80%;
+  height: 80%;
+  margin-top: 20px;
+}
+
+.ytbox {
+  margin-left: 4%;
+  margin-right: 4%;
+  width:115%;
+  height: 96%;
+  margin-top: 20px;
+}
+
+.numbers {
+font-weight: bold}
+
+.newspic {
+
+  width: 100%;
+  height: 100%;
+}
