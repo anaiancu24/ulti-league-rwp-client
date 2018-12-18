@@ -1,5 +1,9 @@
+.home {
+  grid-template: repeat(4, 720px) / 10% 1fr 10%
+}
+
 .home-page {
-  grid-area: 1 / 1 / 7 / 3;
+  grid-area: 1 / 1 / 5 / 3;
 }
 
 .hero {
@@ -243,7 +247,7 @@
 .draft-promo {
   position: relative;
   top: -300px;
-  width: 70%;
+  width: 80%;
   height: 800px;
   margin: auto;
   display: flex;
@@ -254,16 +258,16 @@
 
 .draft-header {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .be-you {
-  width: 70%;
+  width: 90%;
   height: 720px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-
 }
 
 .be-you img {

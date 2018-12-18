@@ -4,6 +4,3 @@
   background-color: #F8FAF9;;
 }
 
-.main {
-  grid-template: repeat(6, 720px) / 10% 1fr 10%
-}
