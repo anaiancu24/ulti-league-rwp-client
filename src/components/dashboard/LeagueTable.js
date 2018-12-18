@@ -3,7 +3,7 @@ import * as React from 'react';
 export default function LeagueTable(props) {
   return (
     <div className="dashboard-league-table">
-      <h1>Ulti-League Ranking</h1>
+      <h1>League Table</h1>
       <table>
         <tr>
           <th>Team</th>
@@ -24,6 +24,11 @@ export default function LeagueTable(props) {
           <td>Team3</td>
           <td>20</td>
           <td>90</td>
+        </tr>
+        <tr>
+          <td>Team4</td>
+          <td>30</td>
+          <td>120</td>
         </tr>
       </table>
     </div>)

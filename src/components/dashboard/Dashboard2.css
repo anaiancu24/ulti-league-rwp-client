@@ -1,5 +1,19 @@
 h1 {
-margin-left: 10px;}
+margin-left: 10px;
+color: #4F4F4F;
+font-size: 40px;
+}
+
+h2 {
+  color: #4F4F4F;
+  font-size: 40px;
+  }
+
+p{
+  color: #4F4F4F;
+  font-size: 20px;
+  margin-top: 2px
+}
 
 table {
     font-family: arial, sans-serif;
@@ -13,14 +27,13 @@ table {
     padding: 8px;
   }
   
-  .dashboard {
-   
+  .dashboard {   
     margin-top: 50px;
     padding: 50px;
     display: grid;
     grid-gap: 50px;
     grid-template-columns: repeat(3, 30%);
-    grid-template-rows: repeat(8,200px);
+    grid-template-rows: repeat(8,320px);
     align-content: space-around;
     justify-content: space-between;
     background-color: whitesmoke;
@@ -31,7 +44,8 @@ table {
   .draft {
     grid-column-start: 1;
     grid-row-start: 1;
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
+    
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
@@ -44,7 +58,7 @@ table {
   .youtube {
     grid-column-start: 1;
     grid-row-start: 2;
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
@@ -55,7 +69,7 @@ table {
   .teams {
     grid-column-start: 1;
     grid-row-start: 3;
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
@@ -65,9 +79,9 @@ table {
   
   .league {
     grid-column-start: 1;
-    grid-row-start: 4;
-    grid-row-end: 6;
-    background-color: #C6C6CF;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
@@ -78,12 +92,22 @@ table {
   .events {
     grid-column-start: 2;
     grid-row-start: 1;
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
 
   }
+  .spiritholder {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    background-color: #F8FAF9;
+    -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+    box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
+
+  }
+  
   
   .newsfeed {
     grid-column-start: 2;
@@ -91,7 +115,7 @@ table {
     grid-row-start: 2;
     grid-row-end: 4;
   
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
@@ -104,10 +128,118 @@ table {
     grid-row-start: 6;
     grid-row-end: 7;
   
-    background-color: #C6C6CF;
+    background-color: #F8FAF9;
     -webkit-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     -moz-box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
     box-shadow: 4px 4px 17px -2px rgba(94,94,94,1);
   
   }
   
+  .bullet {
+    position: relative;  
+    width: 30px;
+    height:30px;
+    margin-right: 10px;
+    margin-left:20px;
+    
+    }
+    
+    .titletext {
+        font-size: 40px;
+        color: #4F4F4F
+    } 
+    
+    .title {
+        display: inline-block;
+        margin-top: -20px;
+    
+    }
+
+    .button2 {
+      position: absolute;
+margin-left: 70%;
+width: 258px;
+height: 56px;
+left: 114px;
+top: 319px;
+background: #FF887A;
+/* DashBoardDropShadow */
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-top-left-radius:20px;
+margin-top: -40px;
+text-align: center;
+color: #F8FAF9;
+font-size: 18px;
+font-style: bold;
+margin-bottom: 10px;
+    }
+
+.spirittext {
+text-align: center;
+color: #4F4F4F;
+font-size: 30px;
+}
+
+ul {
+  list-style: none
+}
+
+.inline {
+display: inline-block
+}
+
+.timebutton {
+  -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007D83), color-stop(1, #007D83));
+	background:-moz-linear-gradient(top, #007D83 5%, #007D83 100%);
+	background:-webkit-linear-gradient(top, #007D83 5%, #007D83 100%);
+	background:-o-linear-gradient(top, #007D83 5%, #007D83 100%);
+	background:-ms-linear-gradient(top, #007D83 5%, #007D83 100%);
+	background:linear-gradient(to bottom, #007D83 5%, #007D83 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+	background-color:#007D83;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #007D83;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #007D83;
+}
+p {
+  margin-top: 10px;
+  text-align: center
+}
+.insidebox {
+  -webkit-box-shadow: inset 0px 6px 14px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 6px 14px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 6px 14px 2px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.label {
+  width: 220px;
+  height: 60px;
+  left: -0.93px;
+  top: -14px;
+  border-radius:5px;
+  background: #007D83;
+  text-align: center;
+  color: #BDBDBD;
+  font-size: 18px;
+  font-style: bold;
+  margin-left: -20px;
+  margin-top: -70px;
+
+}

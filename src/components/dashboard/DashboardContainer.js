@@ -3,14 +3,15 @@ import { connect } from 'react-redux'
 import YourUpComingEvents from './YourUpComingEvents';
 import './Dashboard2.css'
 import PersonalNewsFeed from './PersonalNewsFeed';
-import FollowedTeams from './FollowedTeams';
+//import FollowedTeams from './FollowedTeams';
 import LeagueTable from './LeagueTable';
 // import DashboardTypeCTA from './AccountTypeCTA';
-import TeamShares from './TeamShares';
+//import TeamShares from './TeamShares';
 import DraftSelection from './DraftSelection'
 import { loadUserData } from '../../actions/users';
 import { userId } from '../../jwt'
 import YouTube from 'react-youtube'
+import SpiritHolder from './SpiritHolder';
 
 class DashboardContainer extends PureComponent {
   componentDidMount() {
@@ -54,9 +55,9 @@ class DashboardContainer extends PureComponent {
         <DraftSelection />
         </div>  
 
-        <div className='teams'>
+        {/* <div className='teams'>
         <FollowedTeams />
-        </div>
+        </div> */}
 
         <div className='league'>
         <LeagueTable />
@@ -70,6 +71,10 @@ class DashboardContainer extends PureComponent {
         <PersonalNewsFeed />
         </div>
         
+        <div className="spiritholder">
+        <SpiritHolder />
+        
+        </div>
 
        
      
@@ -77,9 +82,9 @@ class DashboardContainer extends PureComponent {
         <DashboardTypeCTA />
         </div> */}
 
-        <div className='shares'>
+        {/* <div className='shares'>
         <TeamShares />
-        </div> 
+        </div>  */}
 
         
       </div>
