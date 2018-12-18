@@ -2,6 +2,8 @@ import * as React from 'react';
 
 export default function LeagueTable(props) {
   return (
+    <div>
+          <button className="label">League Table</button>
     <div className="dashboard-league-table">
       <h1>League Table</h1>
       <table>
@@ -31,5 +33,6 @@ export default function LeagueTable(props) {
           <td>120</td>
         </tr>
       </table>
+    </div>
     </div>)
 }

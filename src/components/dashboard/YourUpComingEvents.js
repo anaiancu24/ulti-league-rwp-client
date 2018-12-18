@@ -3,6 +3,9 @@ import blackdot from '../../images/blackdot.png'
 
 export default function YourUpComingEvents(props) {
   return (
+    <div>
+          <button className="label">Your team's matches</button>
+
     <div className="dashboard-events">
 <div className='title'>
 
@@ -27,5 +30,6 @@ export default function YourUpComingEvents(props) {
 
 </div>
 
+    </div>
     </div>)
 }
