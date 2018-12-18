@@ -1,4 +1,4 @@
-.dashboard-events {
+/* .dashboard-events {
   width: 500px;
   border: 1px solid white;
 }
@@ -32,4 +32,78 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+} */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.dashboard {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 600px 600px 600px;
+  grid-template-rows: 100px 100px 200px 100px 100px 100px;
+  grid-gap: 10px;
+  color: #444;
+  margin-bottom: 40px;
+  margin-left: 50px;
+}
+
+.draft {
+  grid-column-start: 1;
+  grid-row-start: 1;
+
+
+
+}
+
+.youtube {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.teams {
+  grid-column-start: 1;
+  grid-row-start: 5;
+
+}
+
+.league {
+  grid-column-start: 1;
+  grid-row-start: 7;
+  grid-row-end: 9;
+
+}
+
+.events {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.newsfeed {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 6;
+
+  background-color: #C6C6CF;
+}
+
+.shares {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  grid-row-start: 10;
+  grid-row-end: 12;
+
+
+
 }

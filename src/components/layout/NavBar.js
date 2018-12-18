@@ -3,7 +3,7 @@ import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import './NavBar.css'
-import logo from '../../images/LOGO.png'
+// import logo from '../../images/LOGO.png'
 import searchIcon from '../../images/SearchIcon.png'
 
 
@@ -46,6 +46,9 @@ const NavBar = (props) => {
         <img src={searchIcon} alt="search-icon"></img>
       </div>
 
+      <div className="logo" onClick={() => props.history.push('/')}>
+        <img src={logo} alt="ulti-league-logo"></img>
+      </div>
 
 
     </nav>
