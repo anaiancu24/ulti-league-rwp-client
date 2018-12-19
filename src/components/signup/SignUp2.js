@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
 import { signUp } from '../../actions/users'
-import SignupForm from './SignupForm'
+//import SignupForm from './SignupForm'
 import './signup.css'
 import { Redirect } from 'react-router-dom'
+//import signuppicture from '../../images/MaskGroup.svg'
 
-class SignupFormContainer extends PureComponent {
+class SignUp2 extends PureComponent {
 
 	state = {
 		firstName: '',
@@ -53,11 +54,13 @@ class SignupFormContainer extends PureComponent {
 	
 		if (this.props.signup.success) return (<Redirect to="/login" />)
 		return (
-			<div className="sign-up-container">
-				<h1>Sign up</h1>
-				<SignupForm onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} onCheck={this.onCheck} />
+            <div className="signup2">
+            
+				<h1 className='signup-title'>Hi! Let's get to know you!</h1>
+				{/* <SignupForm onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} onCheck={this.onCheck} /> */}
+            
 				<p style={{ color: 'red' }}>{this.props.signup.error}</p>
-			</div>
+            </div>
 		)
 	}
 }
@@ -68,4 +71,4 @@ const mapStateToProps = function (state) {
 	}
 }
 
-export default connect(mapStateToProps, { signUp })(SignupFormContainer)
+export default connect(mapStateToProps, { signUp })(SignUp2)

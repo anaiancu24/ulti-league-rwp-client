@@ -57,11 +57,11 @@ class DashboardContainer extends PureComponent {
       </div>
       
       </div>
-
+{this.props.currentUser && this.props.userData && this.props.userData.account.includes('owner') && 
       <div className='draft'>
         <DraftSelection />
         </div>  
-
+}
         {/* <div className='teams'>
         <div className='teams'>
         <YourUpComingEvents />
@@ -70,13 +70,17 @@ class DashboardContainer extends PureComponent {
         <FollowedTeams />
         </div> */}
 
-        <div className='league'>
-        <LeagueTable />
-        </div>
+          <div className='league'>
+          <LeagueTable />
+          </div>
+     
 
+      
+{this.props.currentUser && this.props.userData && this.props.userData.account.includes('owner') && 
         <div className="events">
         <YourUpComingEvents />
         </div>
+}
 
         <div className="newsfeed">
         <PersonalNewsFeed />
@@ -98,9 +102,9 @@ class DashboardContainer extends PureComponent {
         <TeamShares />
         </div>  */}
 
-          {this.props.events && <p>{this.props.events[0].name}</p> }
+          {/* {this.props.events && <p>{this.props.events[0].name}</p> }
           {this.props.owner && <p>{this.props.owner.shares}</p> }
-          {this.props.userData && <p>{this.props.userData.firstName}</p> }
+          {this.props.userData && <p>{this.props.userData.firstName}</p> } */}
       </div>
     )
   }
@@ -113,6 +117,7 @@ const mapStateToProps = (state, props) => ({
   authenticated: !!state.currentUser,
   events: state.events,
   owner: state.owner,
+  users: state.users
   
 })
 

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './DraftSelection.css'
 import blackdot from '../../images/blackdot.png'
+import {Link} from 'react-router-dom'
 
 export default function DraftSelection(props) {
   return (
@@ -38,7 +39,10 @@ export default function DraftSelection(props) {
       </div>
       </div>
 <div>
+<Link to='/yourteam'>
   <button className="button1">Manage your selection</button>
+  </Link>
+
 </div>
       </div>
     </div>)

@@ -1,3 +1,3 @@
-export const baseUrl = 'http://080ed687.ngrok.io'
+export const baseUrl = 'http://e7f4189c.ngrok.io'
 
 export const localStorageJwtKey = 'currentUserJwt'
