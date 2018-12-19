@@ -13,7 +13,7 @@ import './YourTeam.css'
 class YourTeamContainer extends PureComponent {
 
   componentWillMount() {
-    console.log('currrentuser' + this.props.currentUser)
+    
     if(!this.props.ownerId)
       this.props.loadOwner()   
   }
@@ -25,14 +25,19 @@ class YourTeamContainer extends PureComponent {
    
     
     if(!this.props.availablePlayers) {
-      return <h1>Loading..</h1>
+      return (
+      <div>
+      <h1>Loading..</h1>
+      <img alt='test' src={'https://www.flickr.com/photos/162745101@N05/44555968950/in/dateposted-public/'} />
+      </div>)
     }
 
     return (
+    <div className='your-team-master-container'>
       <div className="your-team-container">
-        <h1>Your Team Container</h1>
-        
+        <h1 className="selector-header">Your Team Container</h1>
         <SelectorContainer />
+      </div>
       </div>
     )
   }
