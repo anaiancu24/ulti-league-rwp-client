@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Krub');
+
+
+
 .sign-up-form {
   background-image: url('../../images/Group.svg');
 background-repeat: no-repeat;
@@ -150,9 +154,44 @@ margin-top: 30px;
     position: relative;
     font-weight: bold;
     margin-left: 12%;
+    margin-right: 35%;
     margin-top: 70px;
     top: 100px;
     margin-bottom: 200px;
+    color: #4F4F4F;
+    font-family: 'Krub', sans-serif;
+    font-size: 40px;
+
+
+
+}
+
+.signup-title2 {
+    position: relative;
+    font-weight: bold;
+    margin-left: 12%;
+    margin-right: 35%;
+    margin-top: 70px;
+    top: 100px;
+    margin-bottom: 140px;
+    color: #4F4F4F;
+    font-family: 'Krub', sans-serif;
+    font-size: 40px;
+    text-align: left;
+
+
+
+}
+
+.subtitle2 {
+font-family: 'Krub', sans-serif;
+color: #4F4F4F;
+text-align: left;
+margin-left: 12%;
+margin-bottom:50px;
+
+
+
 
 
 }
@@ -167,7 +206,155 @@ margin-top: 30px;
 }
 
 .signup-form {
-    margin-left: 5%;
-    margin-right: 55%
+    margin-left: 12%;
+    margin-right: 35%
 }
 
+.inputboxupdate {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    width: 40% !important;
+    height: 40px !important; 
+    color:#007D83 !important;
+    background-color: #EFF3F2 !important;
+    font-size: 15px !important;
+    margin-bottom: 10px !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+    padding: 17px !important;
+    font-family: 'Krub', sans-serif !important;
+
+
+    
+
+
+}
+.inputbox1update {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    width: 40% !important;
+    height: 40px !important;
+    color:#007D83 !important;
+    background-color: #EFF3F2 !important;
+    font-size: 15px !important;
+    margin-bottom: 25px !important;
+    box-sizing: border-box !important;
+    border: none !important;
+    padding: 17px !important;
+    font-family: 'Krub', sans-serif !important;
+
+
+
+}
+
+.gender {
+    margin-top: 45px;
+    text-align: left;
+    color: #4F4F4F;
+    font-family: 'Krub', sans-serif;
+    margin-right: 35%
+
+
+
+}
+
+
+
+::-webkit-input-placeholder {
+    color:#007D83;
+
+}
+
+.birthdate {
+    margin-top: 45px;
+    text-align: left;
+    color: #4F4F4F;
+    font-family: 'Krub', sans-serif;
+    margin-right: 35%
+}
+
+.genderoption1 {
+    border-radius: 50%
+}
+
+.gender1 {
+    font-family: 'Krub', sans-serif;
+    font-size: 50px;
+}
+
+.gendername {
+    margin-right: 40px;
+    font-family: 'Krub', sans-serif;
+    font-size: 50px;
+
+
+}
+
+.dobform {
+    margin-left: 12%
+}
+
+.nextsignup2 {
+    margin-left: 26%;
+    background-color: #FF887A;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0px 10px 10px;
+    color: white;
+    font-family: 'Krub', sans-serif;
+    font-weight: bold;
+    font-size:20px;
+    width: 7%;
+    height: 40px;
+    cursor: pointer;
+
+}
+
+
+.day {
+    width:12% !important;
+    background-color: #B3D5D6 !important;
+    color: #007D83 !important;
+    display: inline-table !important;
+    margin-right: 20px;
+}
+
+
+.selects {
+    margin-bottom: 50px;
+    
+}
+
+.accounttype {
+    margin-left: 12%;
+
+}
+
+.acctype {
+    font-size: 20px !important ;
+    color: #4F4F4F !important;
+    margin-bottom: 15px;
+    
+}
+
+.buttons {
+    margin-top: 70px
+}
+
+.backbutton {
+    margin-right: -140px;
+    cursor: pointer;
+    font-size: 19px !important ;
+    color: #4F4F4F !important;
+    font-family: 'Krub', sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+
+}
+
+.icon2 {
+    cursor: pointer;
+}
