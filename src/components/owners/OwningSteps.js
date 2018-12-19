@@ -7,7 +7,7 @@ export default function OwningSteps(props) {
       <div className="step-container">
         <div>
           <h3>1.<br></br>Pick a team</h3>
-          <p>Many teams will be vying for a spot in the new UltiLeague! Pick the team you want to see play against other great teams and start rooting!</p>
+          <p>Many teams will be voting for a spot in the new UltiLeague! Pick the team you want to see play against other great teams and start rooting!</p>
           <p>For each region, the teams that have the most support will play!</p>
         </div>
 

@@ -2,17 +2,24 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import OwningSteps from './OwningSteps';
 import './ownerlandingpage.css';
-import { loadOwner } from '../../actions/owners'
+import { loadUserData } from '../../actions/users';
+import { loadTeams } from '../../actions/teams';
+
 import BecomeOwnerForm from './BecomeOwnerForm';
 import WhyOwner from './WhyOwner';
 
-class OwnerProfileContainer extends PureComponent {
+class OwnerLandingPage extends PureComponent {
+
+  componentWillMount() {
+    this.props.loadUserData()
+    this.props.loadTeams()
+  }
 
   render() {
     return (
       <div className="owner-landing-page-container">
         <div className="owner-hero">
-          <BecomeOwnerForm />
+          <BecomeOwnerForm teams={this.props.teams}/>
         </div>
         <WhyOwner />
         <OwningSteps />
@@ -22,11 +29,12 @@ class OwnerProfileContainer extends PureComponent {
 }
 
 const mapStateToProps = state => ({
+  teams: state.teams,
   authenticated: !!state.currentUser
 })
 
 const mapDispatchToProps = {
-  loadOwner
+  loadUserData, loadTeams
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(OwnerProfileContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(OwnerLandingPage)
