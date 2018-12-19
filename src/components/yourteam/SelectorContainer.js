@@ -88,17 +88,25 @@ FilterList = (event) => {
 // }
 
     if(!this.props.availablePlayers) {
-      return <h1>hello</h1> 
+      return <h1>Loading...</h1> 
     }
 
     return (
       <div className="selectorbox-container">
         <div className='draft-list-container'>
           <div className="draft-filter">
-            <input onChange={this.checkBoxMales} type="checkbox" /> Males
-            <input onChange={this.checkBoxFemales} type="checkbox" /> Females
+      
+
+        
+            <label className='checkbox-button'>
+            <input onChange={this.checkBoxMales} type="checkbox"/><span>Only Males</span>
+            </label>
+         
+            <label className='checkbox-button'>
+            <input onChange={this.checkBoxFemales} type="checkbox"/><span>Only Females</span>
+            </label>
+            <button className='draft-filter-sort' onClick={this.sortByLastName}>Sort by name</button>
             <DraftListSearch  FilterList={this.FilterList}/>
-            <button onClick={this.sortByLastName}>Sort by Alphabet</button>
           </div>
           <DraftListContainer availablePlayers={this.state.playersFiltered.filter(player => !this.props.selectedPlayers.find(x => x.id === player.id ))}/>
         </div>
@@ -108,11 +116,11 @@ FilterList = (event) => {
               </div>
           <SelectedListContainer selectedPlayers={this.props.selectedPlayers} />
           <div className='selected-stats-area'>
-              <p>{this.props.selectedPlayers.filter(player => player.gender === 'female').length}/7 F</p>
-              <p>{this.props.selectedPlayers.filter(player => player.gender === 'male').length}/7 M</p>
+              <p>{this.props.selectedPlayers.filter(player => player.gender === 'female').length}/7 Female</p>
+              <p>{this.props.selectedPlayers.filter(player => player.gender === 'male').length}/7 Male</p>
           </div>
-          <div className='selected-save-area'>
-              <button onClick={this.clearSelectionButton}>Clear selection</button>
+          <div className='selected-clear-area'>
+              <button className='selected-clear-button' onClick={this.clearSelectionButton}>Clear selection</button>
           </div>
         </div>
       </div>

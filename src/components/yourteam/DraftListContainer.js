@@ -26,7 +26,6 @@ selectPlayer = (playerId) => {
 }
 
  togglePopup = (playerId) => {
-
     this.setState({
       playerId,
       showPopup: !this.state.showPopup
@@ -38,7 +37,7 @@ selectPlayer = (playerId) => {
       <div className='draft-list'>
         <DraftList togglePopup={this.togglePopup} availablePlayers={this.props.availablePlayers} selectPlayer={this.selectPlayer}/>
         {this.state.showPopup && 
-          <PlayerPopup closePopup={this.togglePopup} pickedPlayer={this.props.availablePlayers.find(player => player.id === this.state.playerId)} selectPlayer={this.selectPlayer} /> 
+          <PlayerPopup togglePopup={this.togglePopup} pickedPlayer={this.props.availablePlayers.find(player => player.id === this.state.playerId)} selectPlayer={this.selectPlayer} /> 
         }
       </div>
     )
