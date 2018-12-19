@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
 import { signUp } from '../../actions/users'
-import SignupForm from './SignupForm'
+import SignupForm from './SignupForm1'
 import './signup.css'
 import { Redirect } from 'react-router-dom'
 

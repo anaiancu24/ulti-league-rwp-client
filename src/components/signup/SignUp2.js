@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
 import { signUp } from '../../actions/users'
-//import SignupForm from './SignupForm'
+import SignupForm1 from './SignupForm1'
 import './signup.css'
 import { Redirect } from 'react-router-dom'
 //import signuppicture from '../../images/MaskGroup.svg'
@@ -57,7 +57,7 @@ class SignUp2 extends PureComponent {
             <div className="signup2">
             
 				<h1 className='signup-title'>Hi! Let's get to know you!</h1>
-				{/* <SignupForm onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} onCheck={this.onCheck} /> */}
+				<SignupForm1 onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} onCheck={this.onCheck} />
             
 				<p style={{ color: 'red' }}>{this.props.signup.error}</p>
             </div>
