@@ -4,7 +4,7 @@ import HomePageTag from './HomePageTag'
 export default function HomePageCard(props) {
 
   return (
-    <div className={props.className}>
+    <div className={props.className} onClick={props.onClick}>
       <HomePageTag class={props.tagName}/>
     </div>)
 }

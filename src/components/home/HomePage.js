@@ -26,11 +26,11 @@ class HomePage extends PureComponent {
           <div className="promo">
             <HomePagePromo />
             <HomePageCard className="join-and-play-promo" tagName="join-and-play-tag" />
-            <HomePageCard className="support-team-promo" tagName="support-team-tag" />
-            <HomePageCard className="support-players-promo" tagName="support-players-tag" />
+            <HomePageCard className="support-team-promo" tagName="support-team-tag" onClick={() => this.props.history.push('/owners/landingpage')}/>
+            <HomePageCard className="support-players-promo" tagName="support-players-tag" onClick={() => this.props.history.push('/owners/landingpage')}/>
             <HomePageCard className="follow-promo" tagName="follow-tag" />
             <HomePageCard className="nominate-promo" tagName="nominate-tag" />
-            <HomePageCard className="owner-promo" tagName="owner-tag" />
+            <HomePageCard className="owner-promo" tagName="owner-tag" onClick={() => this.props.history.push('/owners/landingpage')}/>
           </div>
           <div className="description-promo">
             <h2>Ultimate Frisbee is awesome!</h2>

@@ -10,7 +10,7 @@ import LeagueTable from './LeagueTable';
 import DraftSelection from './DraftSelection'
 import { loadEvents } from '../../actions/events';
 import { loadOwner } from '../../actions/owners';
-import { loadUserData} from '../../actions/users'
+import { loadUserData } from '../../actions/users'
 import { userId } from '../../jwt'
 import YouTube from 'react-youtube'
 import SpiritHolder from './SpiritHolder';
@@ -28,11 +28,6 @@ class DashboardContainer extends PureComponent {
     event.target.pauseVideo();
   }
 
-  onReady(event) {
-    // access to player in all event handlers via event.target
-    event.target.pauseVideo();
-  }
-
   render() {
     const opts = {
       height: '80%',
@@ -43,24 +38,22 @@ class DashboardContainer extends PureComponent {
     };
     return (
       <div className='dashboard'>
-      <div className='youtube'>
+        <div className='youtube'>
+          <button className="label">Latest videos</button>
+          <div className="ytbox">
+            <YouTube
+              videoId="2g811Eo7K8U"
+              opts={opts}
+              onReady={this.onReady}
+            />
 
-      <button className="label">Latest videos</button>
+          </div>
 
-<div className="ytbox">
-         <YouTube
-        videoId="2g811Eo7K8U"
-        opts={opts}
-        onReady={this.onReady}
-      />
+        </div>
 
-      </div>
-      
-      </div>
-
-      <div className='draft'>
-        <DraftSelection />
-        </div>  
+        <div className='draft'>
+          <DraftSelection />
+        </div>
 
         {/* <div className='teams'>
         <div className='teams'>
@@ -71,25 +64,23 @@ class DashboardContainer extends PureComponent {
         </div> */}
 
         <div className='league'>
-        <LeagueTable />
+          <LeagueTable />
         </div>
 
         <div className="events">
-        <YourUpComingEvents />
+          <YourUpComingEvents />
         </div>
 
         <div className="newsfeed">
-        <PersonalNewsFeed />
+          <PersonalNewsFeed />
         </div>
 
 
         <div className="spiritholder">
-        <SpiritHolder />
-        
+          <SpiritHolder />
+
         </div>
 
-
-     
         {/* <div className='cta'>
         <DashboardTypeCTA />
         </div> */}
@@ -98,9 +89,6 @@ class DashboardContainer extends PureComponent {
         <TeamShares />
         </div>  */}
 
-          {this.props.events && <p>{this.props.events[0].name}</p> }
-          {this.props.owner && <p>{this.props.owner.shares}</p> }
-          {this.props.userData && <p>{this.props.userData.firstName}</p> }
       </div>
     )
   }
@@ -113,7 +101,7 @@ const mapStateToProps = (state, props) => ({
   authenticated: !!state.currentUser,
   events: state.events,
   owner: state.owner,
-  
+
 })
 
 const mapDispatchToProps = {
