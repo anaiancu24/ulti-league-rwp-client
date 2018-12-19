@@ -7,10 +7,9 @@ import SignupFormContainer from './signup/SignupFormContainer';
 import PlayerProfileContainer from './players/PlayerProfileContainer';
 import CoachProfileContainer from './coaches/CoachProfileContainer';
 import TeamProfileContainer from './teams/TeamProfileContainer';
-import OwnerProfileContainer from './owners/OwnerProfileContainer';
+import OwnerLandingPageContainer from './owners/OwnerLandingPageContainer';
 import PlayersOverviewContainer from './players/PlayersOverviewContainer';
 import CoachesOverviewContainer from './coaches/CoachesOverviewContainer';
-import OwnerOverviewContainer from './owners/OwnersOverviewContainer';
 import TeamsOverviewContainer from './teams/TeamsOverviewContainer';
 import DashboardContainer from './dashboard/DashboardContainer';
 import YourTeamContainer from './yourteam/YourTeamContainer';
@@ -25,10 +24,9 @@ export default function Routes() {
       <Route exact path="/players/:id" component={PlayerProfileContainer} />
       <Route exact path="/coaches/:id" component={CoachProfileContainer} />
       <Route exact path="/teams/:id" component={TeamProfileContainer} />
-      <Route exact path="/communityowners/:id" component={OwnerProfileContainer} />
+      <Route exact path="/owners/landingpage" component={OwnerLandingPageContainer} />
       <Route exact path="/players" component={PlayersOverviewContainer} />
       <Route exact path="/coaches" component={CoachesOverviewContainer} />
-      <Route exact path="/communityowners" component={OwnerOverviewContainer} />
       <Route exact path="/teams" component={TeamsOverviewContainer} />
       <Route exact path="/dashboard" component={DashboardContainer} />
       <Route exact path="/yourteam" component={YourTeamContainer} />

@@ -1,26 +1,27 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import OwnerProfile from './OwnerProfile';
+import OwningSteps from './OwningSteps';
+import './ownerlandingpage.css';
 import { loadOwner } from '../../actions/owners'
+import BecomeOwnerForm from './BecomeOwnerForm';
+import WhyOwner from './WhyOwner';
 
 class OwnerProfileContainer extends PureComponent {
 
-  /* componentDidMount() {
-    this.props.loadCoach(Number(this.props.match.params.id))
-  } */
-
   render() {
     return (
-      <div className="owner-profile-container">
-        <OwnerProfile />
+      <div className="owner-landing-page-container">
+        <div className="owner-hero">
+          <BecomeOwnerForm />
+        </div>
+        <WhyOwner />
+        <OwningSteps />
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  /* communityOwner: state.communityOwner,
-  communityOwnerId: state.communityOwner && state.communityOwner.id, */
   authenticated: !!state.currentUser
 })
 
