@@ -6,26 +6,25 @@ export default function BecomeOwnerForm(props) {
     <div className="become-owner-form">
       <h2>HELP YOUR TEAM PLAY</h2>
       <h2>Become a Spirit<br></br>Owner</h2>
-      <form>
+
+      <form onSubmit={props.onSubmit}>
+
         <select className="area-select" defaultValue="default">
-          <option value="default">Amsterdam</option>
+          <option value="default">Select your area</option>
+          <option value="amsterdam">Amsterdam</option>
         </select>
-        <select className="team-select" defaultValue="default">
+
+        <select className="team-select" defaultValue="default" name="selectedTeam" onChange={props.onSelect}>
           <option value="default">Pick your team</option>
           {
             (teams) && teams.map(team => {
               return (
-                <option>{team.name}</option>
+                <option key={team.id} value={team.id}>{team.name}</option>
               )
             })
           }
-         {/*  <option value="team1">Team1</option>
-          <option value="team2">Team2</option>
-          <option value="team3">Team3</option>
-          <option value="team4">Team4</option> */}
         </select>
-        <button>Let's help the coach!</button>
+        <button type="submit">Let's help the coach!</button>
       </form>
-
     </div>)
 }

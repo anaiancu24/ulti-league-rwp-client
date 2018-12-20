@@ -44,6 +44,7 @@ export const login = (data) => (dispatch) =>
 		.post(`${baseUrl}/logins`)
 		.send(data)
 		.then(result => dispatch(userLoginSuccess(result.body)))
+		.then(_ => dispatch(loadUserData()))
 		.catch(err => {
 			if (err.status === 400) {
 				dispatch(userLoginFailed(err.response.body.message))
