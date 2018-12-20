@@ -19,7 +19,7 @@ export default function SpiritHolder(props) {
             <div className="spirit-holder">
 
                 {props.owner && props.owner.team &&
-                    <h3 className="spirittext">Your team has almost met their <br /> budget goal! Help them with the <br /> last bit!</h3>
+                    <h3 className="spirittext">Your team has almost met their <br /> budget goal! Help them with the last bit!</h3>
                 }
 
                 {props.owner && !props.owner.team &&
