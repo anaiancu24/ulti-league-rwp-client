@@ -77,7 +77,7 @@ class SignUpContainer extends PureComponent {
 
 	render() {
 
-		if (this.props.signup.success) return (<Redirect to="/login" />)
+		if (this.props.signup.success) return (<Redirect to="/loading" />)
 
 		const { step } = this.state
 
@@ -92,7 +92,7 @@ class SignUpContainer extends PureComponent {
 				return (
 					<div className="signupcontainer">
           	<SignUp3 onCheck={this.onCheck} handleBack={this.handleBack} handleDone={this.handleDone} 
-							onSubmit={this.onSubmit}/>
+						onSubmit={this.onSubmit}/>
 					</div>
 				)
 			default:

@@ -7,9 +7,9 @@ export default class Loading extends PureComponent {
 
         setTimeout(function(){ 
 
-            window.location.href = "/dashboard";
+            window.location.href = "/login";
     
-    }, 5000)        
+    }, 4000)        
 
         return (
             <div className="loading-page">
