@@ -24,12 +24,13 @@ margin-left: 15%;
 background-color: #ffffff
 }
 
-.signuptitle {
-    position: relative;
-    text-align: center;
-    top: 50px;
-    margin-bottom: 20px;
-    font-weight: bold
+.signuptitle1 {
+    position: relative !important;
+    text-align: center !important;
+    top: 50px !important;
+    margin-bottom: 20px !important;
+    font-weight: bold !important;
+    font-size: 30px !important;
 }
 .facebookbutton {
     text-align: center;
@@ -121,20 +122,23 @@ margin-top: 30px;
 }
 
 .loginbutton {
-    border-style: solid;
-    border-width: 0.1em;
-    width: 60px;
-    height: 30px;
-    border-radius: 5px;
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
-    cursor: pointer
+    border-style: solid !important;
+    border-color: #007D83;
+    border-width: 0.1em !important;
+    width: 70px !important;
+    height: 30px !important;
+    border-radius: 5px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    transform: translateZ(0) !important;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0) !important;
+    backface-visibility: hidden !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    transition-duration: 0.3s !important;
+    transition-property: transform !important;
+    cursor: pointer!important;
+    color: #007D83 !important;
+
 
 }
 
@@ -400,4 +404,12 @@ margin-bottom:50px;
 
 .icon2 {
     cursor: pointer;
+}
+
+.loading-page{
+    background-image: url('../../images/Frame.svg');
+    background-size: 100%;
+    width: 100%;
+    height: 900px;
+    margin-top: 50px;
 }

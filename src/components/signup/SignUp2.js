@@ -21,10 +21,10 @@ export default class SignUp2 extends PureComponent {
                             <input className="inputboxupdate" placeholder="How about e-mail?" type="email" name="email" value={this.props.values.email} onChange={this.props.onChange} />
                         </div>
                         <div>
-                            <input className="inputboxupdate" placeholder="Create a password" type="text" name="password" value={this.props.values.password} onChange={this.props.onChange} />
+                            <input className="inputboxupdate" placeholder="Create a password" type="password" name="password" value={this.props.values.password} onChange={this.props.onChange} />
                         </div>
                         <div>
-                            <input className="inputboxupdate" placeholder="Confirm password" type="text" name="password" value={this.props.values.password} onChange={this.props.onChange} />
+                            <input className="inputboxupdate" placeholder="Confirm password" type="password" name="confirmPassword" value={this.props.values.confirmPassword} onChange={this.props.onChange} />
                         </div>
 
                         <p className="gender">When you were born, they thought you were:</p>
