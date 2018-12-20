@@ -4,6 +4,7 @@ import { signUp } from '../../actions/users'
 import { Redirect } from 'react-router-dom'
 import SignUp2 from './SignUp2'
 import SignUp3 from './Signup3'
+import Loading from './Loading'
 
 
 class SignUpContainer extends PureComponent {
@@ -53,35 +54,54 @@ class SignUpContainer extends PureComponent {
       })
       console.log(this.state.account)
 		}
-  }
+	}
+
+  handleBack = () => {
+    this.setState({
+      step: 1
+    })
+	}
   
   handleNext = () => {
     this.setState({
       step: 2
     })
   }
-
-  handleBack = () => {
+	
+	handleDone = () => {
     this.setState({
-      step: 1
+      step: 3
     })
   }
 
 
 	render() {
-	
+
 		if (this.props.signup.success) return (<Redirect to="/login" />)
-		return (
-      <div className="signupcontainer">
-        {(this.state.step === 1 ? 
-          (
-            <SignUp2 values={this.state} onChange={this.onChange} handleNext={this.handleNext}/>
-          ) : (
-            <SignUp3 onCheck={this.onCheck} handleBack={this.handleBack} onSubmit={this.onSubmit}/>
-          )
-        )}
-      </div>
-		)
+
+		const { step } = this.state
+
+		switch(step) {
+			case 1:
+				return (
+					<div className="signupcontainer">
+      			<SignUp2 values={this.state} onChange={this.onChange} handleNext={this.handleNext}/>
+					</div>
+				)
+			case 2:
+				return (
+					<div className="signupcontainer">
+          	<SignUp3 onCheck={this.onCheck} handleBack={this.handleBack} handleDone={this.handleDone} 
+							onSubmit={this.onSubmit}/>
+					</div>
+				)
+			default:
+				return (
+					<div className="signupcontainer">
+          	<Loading />
+					</div>
+				)
+		}
 	}
 }
 

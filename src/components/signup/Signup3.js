@@ -45,7 +45,7 @@ export default class SignUp3 extends PureComponent {
             <span className="backbutton" onClick={this.props.handleBack}>  
             Back
             </span> 
-            <button className="nextsignup2"><b>Done!</b></button>
+            <button className="nextsignup2" onClick={this.props.handleDone}><b>Done!</b></button>
           </div>
         </form>
       </div>
