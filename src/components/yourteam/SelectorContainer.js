@@ -5,6 +5,7 @@ import SelectedListContainer from './SelectedListContainer';
 import DraftListSearch from './DraftListSearch'
 import {loadPlayers} from '../../actions/players'
 import {clearSelection} from '../../actions/selectPlayer'
+import {withRouter} from 'react-router'
 
 class SelectorContainer extends PureComponent {
 
@@ -54,14 +55,21 @@ checkBoxFemales = () => {
   }
 
 sortByLastName = () => {
+  console.log(this.state.playersFiltered)
   this.setState({
+   
     playersFiltered: this.state.playersFiltered.sort((a, b) => {
-      if(a.user.firstName < b.user.firstName) { return -1; }
-      if(a.user.firstName > b.user.firstName) { return 1; }
+      if(a.user.lastName < b.user.lastName) { return -1; }
+      if(a.user.lastName > b.user.lastName) { return 1; }
       return 0;
     }
   )
 })
+console.log(this.state.playersFiltered)
+}
+
+renderRedirect = () => {
+  this.props.history.push('/dashboard')
 }
 
 
@@ -80,12 +88,6 @@ FilterList = (event) => {
   }
 
   render() {
-//     if(this.props.availablePlayers && this.state.playersFiltered.length === 0) {
-//       this.setState({
-//         initialPlayers: this.props.availablePlayers,
-//         playersFiltered: this.props.availablePlayers
-//       }) 
-// }
 
     if(!this.props.availablePlayers) {
       return <h1>Loading...</h1> 
@@ -95,13 +97,9 @@ FilterList = (event) => {
       <div className="selectorbox-container">
         <div className='draft-list-container'>
           <div className="draft-filter">
-      
-
-        
             <label className='checkbox-button'>
             <input onChange={this.checkBoxMales} type="checkbox"/><span>Only Males</span>
             </label>
-         
             <label className='checkbox-button'>
             <input onChange={this.checkBoxFemales} type="checkbox"/><span>Only Females</span>
             </label>
@@ -116,11 +114,13 @@ FilterList = (event) => {
               </div>
           <SelectedListContainer selectedPlayers={this.props.selectedPlayers} />
           <div className='selected-stats-area'>
-              <p>{this.props.selectedPlayers.filter(player => player.gender === 'female').length}/7 Female</p>
-              <p>{this.props.selectedPlayers.filter(player => player.gender === 'male').length}/7 Male</p>
+              <p>{this.props.selectedPlayers.filter(player => player.gender === 'female').length}<strong>/7 Female</strong></p>
+              <p>{this.props.selectedPlayers.filter(player => player.gender === 'male').length}<strong>/7 Male</strong></p>
           </div>
-          <div className='selected-clear-area'>
-              <button className='selected-clear-button' onClick={this.clearSelectionButton}>Clear selection</button>
+          <div className='selected-button-area'>
+              <button className='selected-clear-button' onClick={this.clearSelectionButton}>Reset</button>
+              <button className='selected-save-button' onClick={this.renderRedirect}>Save</button>
+             
           </div>
         </div>
       </div>
@@ -142,4 +142,4 @@ const mapDispatchToProps = {
   clearSelection
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SelectorContainer)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SelectorContainer))
