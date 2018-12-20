@@ -17,7 +17,7 @@
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.25);
     border-radius: 30px 0px 0px 0px;
     display:grid;
-    grid-template: 5% 3% 1fr / 2% 96% 2%
+    grid-template: 6% 3% 1fr / 2% 96% 2%
 }
 
 .selector-header {
@@ -81,7 +81,7 @@
   font-style: normal;
   font-weight: bold;
   line-height: normal;
-  font-size: 18px;
+  font-size: 32px;
   color: #4F4F4F;
   text-align:center;
 }
@@ -92,7 +92,7 @@
   min-width: 600px;
   height: 800px;
   display: grid;
-  grid-template: 10% 1fr 10% 10% / 100%
+  grid-template: 10% 1fr 7% 15% / 100%
 }
 
 .selected-list {
@@ -126,17 +126,12 @@
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 36px;
+  font-size: 34px;
   color: #4F4F4F;
 }
 
-.selected-save-area {
-  width: 100%;
-  height: 5%;
-  display:flex;
-  flex: wrap;
-  justify-content: center;
-}
+
+
 
 /* LOADING OF PLAYERS */
 
@@ -169,6 +164,8 @@
   left: 140px;
   background: #F8FAF9;
   color: #007D83;
+  font-size:25px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .draft-item-text {
@@ -199,8 +196,10 @@
   width: 25px;
   top: -154px;
   left: 74px;
+  font-size:16px;
   background: #F8FAF9;
-  color: #007D83
+  color: #007D83;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .selected-player-photo {
@@ -209,17 +208,44 @@
   border-radius: 10px 0px 0px 0px;
 }
 
-.selected-clear-area {
+.selected-button-area {
   display: flex;
-  justify-content: center
+  justify-content: center;
+  height: 70px;
+ 
 }
 .selected-clear-button {
   background: #EFF3F2;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   border-radius: 5px 0px 5px 5px;
+  font-family: Krub;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
   color: #007D83;
-  height: 30px;
-  margin-bottom: 20px;
+  width: 150px;
+  height: 50px;
+  margin-right: 5px
+
+
+}
+
+.selected-save-button {
+  background: #FF887A;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px 0px 5px 5px;
+  font-family: Krub;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #EFF3F2;
+  width: 150px;
+  height: 50px;
+  margin-left: 5px
 }
 
 /* filter items */
@@ -255,7 +281,8 @@
 
 
 .draft-filter-sort {
-  height: 28px;
+  height: 38px;
+  width: 120px;
   color: white;
   background: #007D83;
   border-radius: 10px 0px 0px 0px;
@@ -263,10 +290,11 @@
 
 
 .draft-filter-search input{
-  height: 25px;
+  height: 32px;
+  width: 200px;
   background: #EFF3F2;
   box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 0px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 

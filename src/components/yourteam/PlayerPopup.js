@@ -6,7 +6,8 @@ import youtube from '../../images/YOUTUBEICON.png'
 import facebook from '../../images/FACEBOOKICON.png'
 import insta from '../../images/INSTAICON.png'
 import twitter from '../../images/TWITTERICON.png'
-
+import closeButton from '../../images/closeButton.png'
+import spiritShares from '../../images/spiritShares.png'
 
 
 
@@ -22,10 +23,10 @@ render() {
 
     
     const opts = {
-      height: '240',
-      width: '450',
+      height: '250',
+      width: '460',
       playerVars: { 
-        autoplay: 1
+        autoplay: 0
       }
     };
 
@@ -34,19 +35,19 @@ render() {
 return (
       <div className='popup' onClick={togglePopup}>
         <div className='popup-inner' onClick={(event) => event.stopPropagation() }>
-          
-          <button className='popup-close-button' onClick={togglePopup}>X</button>
+          <img className='popup-close-button' alt='closebutton' src={closeButton} onClick={togglePopup} />
           <div className='popup-player-content'>
-            <img className='popup-player-image' alt='alt' src={pickedPlayer.pictureURL} />
-            <div className='popup-player-info'>
-              <p>{pickedPlayer.user.firstName + pickedPlayer.user.lastName}</p>
-              <p>{pickedPlayer.position}</p>
-              <p>{pickedPlayer.location}</p>
+            <img className='popup-player-image' alt='profilePic' src={pickedPlayer.pictureURL} />
+            <img className='popup-spirit-shares' alt='spiritShares' src={spiritShares} />
+             <div className='popup-player-info'>
+              <p className='popup-player-info-name'>{pickedPlayer.user.firstName + ' ' + pickedPlayer.user.lastName}</p>
+              <p className='popup-player-info-position'> Position: {pickedPlayer.position}</p>
+              <p classname='popup-player-info-location'>{pickedPlayer.location} area</p>
               <div className='popup-player-social'>
-                <img src={youtube} alt="youtube-icon"></img>
-                <img src={insta} alt="insta-icon"></img>
-                <img src={facebook} alt="facebook-icon"></img>
-                <img src={twitter} alt="twitter-icon"></img>
+                <img src={youtube} alt="youtube-icon" />
+                <img src={insta} alt="insta-icon" />
+                <img src={facebook} alt="facebook-icon" />
+                <img src={twitter} alt="twitter-icon" />
                </div>
             </div>
             <img className='popup-stats' src={stats} alt='stats'></img>
@@ -59,10 +60,11 @@ return (
               />
             </div> 
           </div>
-          <div className='popup-buttons-area'></div>
+          <div className='popup-button-area'>
           <button className='popup-button-follow'>Follow Player</button>
           {selectPlayer && <button className='popup-button-select' onClick={() => selectPlayer(pickedPlayer.id)}>Select Player</button>}
           {unSelectPlayerButton && <button className='popup-button-select' onClick={() => unSelectPlayerButton(pickedPlayer.id)}>UnSelect Player</button>}
+          </div>
         </div>
       </div>
     );
