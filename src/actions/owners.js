@@ -32,5 +32,30 @@ export const loadOwner = () => (dispatch, getState) => {
     .catch(err => console.error(err))
 }
 
+export const becomeOwner = (teamId, shares) => (dispatch, getState) => {
+  const state = getState()
+  const jwt = state.currentUser.jwt
+
+  request
+    .post(`${baseUrl}/owners`)
+    .set('Authorization', `Bearer ${jwt}`)
+    .send({ teamId, shares})
+    .then(response => console.log(response.body))
+    .catch(err => console.error(err))
+}
+
+
+export const updateOwner = (ownerId, shares) => (dispatch, getState) => {
+  const state = getState()
+  const jwt = state.currentUser.jwt
+
+  request
+    .patch(`${baseUrl}/owners/${ownerId}`)
+    .set('Authorization', `Bearer ${jwt}`)
+    .send({ shares })
+    .then(response => console.log(response.body))
+    .catch(err => console.error(err))
+
+}
 
 
