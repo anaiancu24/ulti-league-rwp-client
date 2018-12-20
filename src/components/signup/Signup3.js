@@ -12,30 +12,30 @@ export default class SignUp3 extends PureComponent {
         <p className="subtitle2">You can select multiple</p>
         <form className="accounttype" onSubmit={this.props.onSubmit}>
           <div>
-            <label>
+          <label class="container">Play in UltiLeague!
               <input type="checkbox" className="player" onClick={this.props.onCheck}/>
-              <span className="acctype">Play in UltiLeague!</span>
+              <span class="checkmark"></span>
               <i class="material-icons" style={{marginLeft: "10px"}}>info</i>
             </label>
           </div>
           <div>
-            <label>
+          <label class="container">Coach in UltiLeague!
               <input type="checkbox" className="coach" onClick={this.props.onCheck}/>
-              <span className="acctype">Coach in UltiLeague!</span>
+              <span class="checkmark"></span>
               <i class="material-icons" style={{marginLeft: "10px"}}>info</i>
             </label>
           </div>
           <div>
-            <label>
+        <label class="container">Become an UltiLeague team season supporter!
               <input type="checkbox" className="owner" onClick={this.props.onCheck}/>
-              <span className="acctype">Become an UltiLeague team season supporter!</span>
+              <span class="checkmark"></span>
               <i class="material-icons" style={{marginLeft: "10px"}}>info</i>
             </label>
           </div>
           <div>
-          <label>
+          <label class="container">No, I think just an account for now is fine!
               <input type="checkbox" className="member" onClick={this.props.onCheck}/>
-              <span className="acctype">No, I think just an account for now is fine!</span>
+              <span class="checkmark"></span>
               <i class="material-icons" style={{marginLeft: "10px"}}>info</i>
             </label>
           </div>

@@ -8,7 +8,7 @@ export default function SelectedList(props) {
       {
         selectedPlayers && selectedPlayers.map((player, index) => {
           return (
-            <div className={`selected-item-${index}`}>
+            <div key={player.id} className={`selected-item-${index}`}>
               <img onClick={() => togglePopup(player.id)} className='selected-player-photo' alt='alt' src={player.pictureURL} />
               <p className='selected-item-text'>{player.user.lastName} </p>
               <button className='remove-selected-player-button' onClick={() => unSelectPlayerButton(player.id)}>X</button>

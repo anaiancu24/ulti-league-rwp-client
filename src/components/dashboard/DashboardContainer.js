@@ -4,10 +4,7 @@ import { Redirect } from 'react-router'
 import YourUpComingEvents from './YourUpComingEvents';
 import './Dashboard2.css'
 import PersonalNewsFeed from './PersonalNewsFeed';
-//import FollowedTeams from './FollowedTeams';
 import LeagueTable from './LeagueTable';
-// import DashboardTypeCTA from './AccountTypeCTA';
-//import TeamShares from './TeamShares';
 import DraftSelection from './DraftSelection'
 import { loadEvents } from '../../actions/events';
 import { loadOwner } from '../../actions/owners';
