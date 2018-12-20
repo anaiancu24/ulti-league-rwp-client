@@ -43,7 +43,6 @@ export default class SignUp2 extends PureComponent {
 
                         <p className="birthdate">Which day was that?</p>
 <div className='selects'>
-<nobr>
 <select className="day browser-default">
 <option value="" disabled selected>Day</option>
 
@@ -144,7 +143,6 @@ export default class SignUp2 extends PureComponent {
 <option value='1992'>1992</option>
 <option value='1993'>1993</option>
   </select>
-  </nobr>
 
   </div>
 

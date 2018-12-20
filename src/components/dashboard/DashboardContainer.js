@@ -88,7 +88,7 @@ class DashboardContainer extends PureComponent {
 
 
         <div className="spiritholder">
-        <SpiritHolder />
+        <SpiritHolder userData={this.props.userData}/>
         
         </div>
 
