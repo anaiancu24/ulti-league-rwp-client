@@ -1,4 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Krub');
+
+
+
 .sign-up-form {
-  height: 720px;
-  width: 90%;
+  background-image: url('../../images/Group.svg');
+background-repeat: no-repeat;
+background-size: 100%;
+width: 100%;
+height: 100%;
+margin-top: -160px;
+}
+
+.sign-up1 {
+    -webkit-box-shadow: 2px 2px 11px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 2px 11px -1px rgba(0,0,0,0.75);
+box-shadow: 2px 2px 11px -1px rgba(0,0,0,0.75);
+width: 22%;
+height: 500px;
+position: relative;
+top: 450px;
+margin-bottom: 800px;
+margin-left: 15%;
+background-color: #ffffff
+}
+
+.signuptitle {
+    position: relative;
+    text-align: center;
+    top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold
+}
+.facebookbutton {
+    text-align: center;
+    background-color: #3B5998;
+    width: 60%;
+    height: 50px;
+    margin-top: 60px;
+    position: relative;
+    border-radius: 5px;
+    margin-left: 20%;
+    border-style: solid;
+    border-width: 0.05em;
+    border-color: rgba(0, 0, 0, 0.1)
+
+    
+}
+.googlebutton {
+    text-align: center;
+    background-color: #F8FAF9;
+    width: 60%;
+    height: 50px;
+    margin-top: 5px;
+    position: relative;
+    border-radius: 5px;
+    margin-left: 20%;
+    border-style: solid;
+    border-width: 0.05em;
+    border-color: rgba(0, 0, 0, 0.1)
+    
+}
+.emailbutton {
+    text-align: center;
+    background-color: #007D83;
+    width: 60%;
+    height: 50px;
+    margin-top: 5px;
+    position: relative;
+    border-radius: 5px;
+    margin-left: 20%;
+    border-style: solid;
+    border-width: 0.05em;
+    border-color: rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    cursor: pointer;
+    text-decoration: none !important
+
+
+    
+}
+.facebookmethod{
+    color: white;
+    cursor: default
+}
+.googlemethod{
+    color: #000000;
+    cursor: default
+
+}
+.emailmethod{
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none !important
+
+}
+
+.or {
+    color: #000000
+}
+
+.privacytext {
+    text-align: center;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.inline2 {
+display: inline-block;
+margin-right: 60px;
+margin-left: 30px;
+margin-top: 30px;
+}
+
+.loginbutton {
+    border-style: solid;
+    border-width: 0.1em;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    cursor: pointer
+
+}
+
+.loginbutton:hover,
+.loginbutton:focus,
+.loginbutton:active {
+    transform: scale(1.1);
+}
+
+.emailbutton:hover,
+.emailbutton:focus,
+.emailbutton:active {
+    transform: scale(1.1);
+}
+
+.signup-title {
+    position: relative;
+    font-weight: bold;
+    margin-left: 12%;
+    margin-right: 35%;
+    margin-top: 70px;
+    top: 100px;
+    margin-bottom: 200px;
+    color: #4F4F4F;
+    font-family: 'Krub', sans-serif;
+    font-size: 40px;
+
+
+
+}
+
+.signup-title2 {
+    position: relative;
+    font-weight: bold;
+    margin-left: 12%;
+    margin-right: 35%;
+    margin-top: 70px;
+    top: 100px;
+    margin-bottom: 140px;
+    color: #4F4F4F;
+    font-family: 'Krub', sans-serif;
+    font-size: 40px;
+    text-align: left;
+
+
+
+}
+
+.subtitle2 {
+font-family: 'Krub', sans-serif;
+color: #4F4F4F;
+text-align: left;
+margin-left: 12%;
+margin-bottom:50px;
+
+
+
+
+
+}
+
+
+
+.signup2 {
+    background-image: url('../../images/Signup1.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 1000px
+}
+
+.signup-form {
+    margin-left: 12%;
+    margin-right: 35%
+}
+
+.inputboxupdate {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    width: 40% !important;
+    height: 40px !important; 
+    color:#007D83 !important;
+    background-color: #EFF3F2 !important;
+    font-size: 15px !important;
+    margin-bottom: 10px !important;
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+    padding: 17px !important;
+    font-family: 'Krub', sans-serif !important;
+
+
+    
+
+
+}
+.inputbox1update {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    width: 40% !important;
+    height: 40px !important;
+    color:#007D83 !important;
+    background-color: #EFF3F2 !important;
+    font-size: 15px !important;
+    margin-bottom: 25px !important;
+    box-sizing: border-box !important;
+    border: none !important;
+    padding: 17px !important;
+    font-family: 'Krub', sans-serif !important;
+
+
+
+}
+
+.gender {
+    margin-top: 45px;
+    text-align: left;
+    color: #4F4F4F;
+    font-family: 'Krub', sans-serif;
+    margin-right: 35%
+
+
+
+}
+
+
+
+::-webkit-input-placeholder {
+    color:#007D83;
+
+}
+
+.birthdate {
+    margin-top: 45px;
+    text-align: left;
+    color: #4F4F4F;
+    font-family: 'Krub', sans-serif;
+    margin-right: 35%
+}
+
+.genderoption1 {
+    border-radius: 50%
+}
+
+.gender1 {
+    font-family: 'Krub', sans-serif;
+    font-size: 50px;
+}
+
+.gendername {
+    margin-right: 40px;
+    font-family: 'Krub', sans-serif;
+    font-size: 50px;
+
+
+}
+
+.dobform {
+    margin-left: 12%
+}
+
+.nextsignup2 {
+    margin-left: 26%;
+    background-color: #FF887A;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0px 10px 10px;
+    color: white;
+    font-family: 'Krub', sans-serif;
+    font-weight: bold;
+    font-size:20px;
+    width: 7%;
+    height: 40px;
+    cursor: pointer;
+
+}
+
+
+.day {
+    width:12% !important;
+    background-color: #B3D5D6 !important;
+    color: #007D83 !important;
+    display: inline-table !important;
+    margin-right: 20px;
+}
+
+
+.selects {
+    margin-bottom: 50px;
+    
+}
+
+.accounttype {
+    margin-left: 12%;
+
+}
+
+.acctype {
+    font-size: 20px !important ;
+    color: #4F4F4F !important;
+    margin-bottom: 15px;
+    
+}
+
+.buttons {
+    margin-top: 70px
+}
+
+.backbutton {
+    margin-right: -140px;
+    cursor: pointer;
+    font-size: 19px !important ;
+    color: #4F4F4F !important;
+    font-family: 'Krub', sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+
+}
+
+.icon2 {
+    cursor: pointer;
 }

@@ -25,7 +25,7 @@ const NavBar = (props) => {
             </button>
             <div className="dropdown-content">
               <Link to={'/login'} style={{ textDecoration: "none" }}><p> LOG IN</p></Link>
-              <Link to={'/signup'} style={{ textDecoration: "none" }}><p> SIGN UP</p></Link>
+              <Link to={'/signup/1'} style={{ textDecoration: "none" }}><p> SIGN UP</p></Link>
             </div>
           </div>
         }

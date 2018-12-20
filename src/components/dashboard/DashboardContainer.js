@@ -51,25 +51,25 @@ class DashboardContainer extends PureComponent {
 
         </div>
 
-        <div className='draft'>
-          <DraftSelection />
-        </div>
 
-        {/* <div className='teams'>
-        <div className='teams'>
-        <YourUpComingEvents />
-        <PersonalNewsFeed />
-
-        <FollowedTeams />
-        </div> */}
+        {
+          this.props.currentUser && this.props.userData && this.props.userData.account.includes('owner') &&
+          <div className='draft'>
+            <DraftSelection />
+          </div>
+        }
 
         <div className='league'>
           <LeagueTable />
         </div>
 
-        <div className="events">
-          <YourUpComingEvents />
-        </div>
+
+        {
+          this.props.currentUser && this.props.userData && this.props.userData.account.includes('owner') &&
+          <div className="events">
+            <YourUpComingEvents />
+          </div>
+        }
 
         <div className="newsfeed">
           <PersonalNewsFeed />
@@ -77,19 +77,11 @@ class DashboardContainer extends PureComponent {
 
 
         <div className="spiritholder">
-          <SpiritHolder />
+          <SpiritHolder userData={this.props.userData} />
 
         </div>
 
-        {/* <div className='cta'>
-        <DashboardTypeCTA />
-        </div> */}
-
-        {/* <div className='shares'>
-        <TeamShares />
-        </div>  */}
-
-      </div>
+      </div >
     )
   }
 }
@@ -101,7 +93,6 @@ const mapStateToProps = (state, props) => ({
   authenticated: !!state.currentUser,
   events: state.events,
   owner: state.owner,
-
 })
 
 const mapDispatchToProps = {

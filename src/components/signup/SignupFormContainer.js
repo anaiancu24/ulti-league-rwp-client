@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
 import { signUp } from '../../actions/users'
-import SignupForm from './SignupForm'
+import SignupForm1 from './SignupForm1'
 import './signup.css'
 import { Redirect } from 'react-router-dom'
 
@@ -53,9 +53,9 @@ class SignupFormContainer extends PureComponent {
 	
 		if (this.props.signup.success) return (<Redirect to="/login" />)
 		return (
-			<div className="sign-up-form">
+			<div className="sign-up-container">
 				<h1>Sign up</h1>
-				<SignupForm onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} onCheck={this.onCheck} />
+				<SignupForm1 onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} onCheck={this.onCheck} />
 				<p style={{ color: 'red' }}>{this.props.signup.error}</p>
 			</div>
 		)

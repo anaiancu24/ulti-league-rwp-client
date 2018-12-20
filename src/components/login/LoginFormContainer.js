@@ -35,11 +35,13 @@ class LoginFormContainer extends PureComponent {
 		)
 
 		return (
+			<div className="login-page">
 			<div className='login-form-container'>
 				<p>Login</p>
 				<LoginForm onSubmit={this.onSubmit} onChange={this.onChange} values={this.state} />
 				{this.props.error &&
 					<span style={{ color: 'red' }}>{this.props.error}</span>}
+			</div>
 			</div>
 		)
 	}

@@ -1,4 +1,4 @@
-/* h1 {
+.titletext {
 margin-left: 10px;
 color: #4F4F4F;
 font-size: 36px;
@@ -6,7 +6,7 @@ font-weight:bold;
 
 }
 
-h2 {
+.numbers{
   color: #4F4F4F;
   font-size: 50px;
   margin-top: 15px;
@@ -16,7 +16,7 @@ h2 {
 p{
   color: #4F4F4F;
   font-size: 20px;
-} */
+} 
 
 table {
     font-family: arial, sans-serif;
