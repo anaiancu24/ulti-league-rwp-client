@@ -22,7 +22,7 @@ export default function InvestConfirmation(props) {
         <p>{p1}</p>
 
         <button className="reject-btn" onClick={props.toggle}>Wait no!</button>
-        <button className="confirm-btn">Yes, I am ready!</button>
+        <button className="confirm-btn" onClick={props.onClick}>Yes, I am ready!</button>
 
       </div>
     </div>)
