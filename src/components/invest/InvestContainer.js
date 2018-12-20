@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import './invest.css'
 import InvestInfo from './InvestInfo';
 import ShareInfo from './ShareInfo';
@@ -7,21 +7,21 @@ import InvestConfirmation from './InvestConfirmation'
 
 
 
-class InvestContainer extends PureComponent {
-  state = {
-    investment: null,
-    toggle: false,
-  }
+export default class InvestContainer extends PureComponent {
+  // state = {
+  //   investment: null,
+  //   toggle: false,
+  // }
 
-  componentDidMount() {
+  // componentDidMount() {
   
-  }
+  // }
 
-  onChange = (event) => {
-    this.setState({
-      investment: event.target.value
-    })
-  }
+  // onChange = (event) => {
+  //   this.setState({
+  //     investment: event.target.value
+  //   })
+  // }
 
   toggleHandle = () => {
     this.setState({
@@ -36,18 +36,18 @@ class InvestContainer extends PureComponent {
           (this.state.toggle === true) && <InvestConfirmation toggle={this.toggleHandle} />
         }
         <InvestInfo />
-        <ShareInfo toggle={this.toggleHandle} onChange={this.onChange}/>
+          <ShareInfo toggle={this.toggleHandle} onChange={this.onChange}/>
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => ({
-  authenticated: !!state.currentUser
-})
+// const mapStateToProps = (state) => ({
+//   authenticated: !!state.currentUser
+// })
 
-const mapDispatchToProps = {
+// const mapDispatchToProps = {
 
-}
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(InvestContainer)
+// export default connect(mapStateToProps, mapDispatchToProps)(InvestContainer)

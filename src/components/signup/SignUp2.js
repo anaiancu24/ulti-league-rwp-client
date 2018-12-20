@@ -32,12 +32,12 @@ export default class SignUp2 extends PureComponent {
                        <div className="genderoptions">
                             <label className="gender-option-container">Female
                                 <input className="gender1" class="with-gap" name="gender" type="radio" value="female" onChange={this.props.onCheck} />
-                                <span className="gendername"></span>
+                                <span className="checkmark"></span>
                             </label>
 
                             <label  className="gender-option-container">Male
                                 <input className="gender2" class="with-gap" name="gender" type="radio" value="male" onChange={this.props.onCheck} />
-                                <span className="gendername"></span>
+                                <span className="checkmark"></span>
                             </label>
                         </div>
 

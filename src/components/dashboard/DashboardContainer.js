@@ -53,7 +53,7 @@ class DashboardContainer extends PureComponent {
 
 
         {
-          this.props.currentUser && this.props.userData && this.props.userData.account.includes('owner') &&
+          this.props.currentUser && this.props.userData && this.props.userData.account.includes('owner') && this.props.owner.team &&
           <div className='draft'>
             <DraftSelection />
           </div>
@@ -65,7 +65,7 @@ class DashboardContainer extends PureComponent {
 
 
         {
-          this.props.currentUser && this.props.userData && this.props.userData.account.includes('owner') &&
+          this.props.currentUser && this.props.userData && this.props.userData.account.includes('owner') && this.props.owner.team &&
           <div className="events">
             <YourUpComingEvents />
           </div>
@@ -77,7 +77,7 @@ class DashboardContainer extends PureComponent {
 
 
         <div className="spiritholder">
-          <SpiritHolder userData={this.props.userData} />
+          <SpiritHolder userData={this.props.userData} owner={this.props.owner}/>
 
         </div>
 

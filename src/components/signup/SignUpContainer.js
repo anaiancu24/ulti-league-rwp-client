@@ -28,7 +28,8 @@ class SignUpContainer extends PureComponent {
 			email: '',
 			password: '',
 			confirmPassword: '',
-			account: ["member"]
+			account: ["member"],
+			step: 1
 		})
 	}
 
