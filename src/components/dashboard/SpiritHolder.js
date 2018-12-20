@@ -7,8 +7,9 @@ export default function SpiritHolder(props) {
 
     }
 
-    return (
-        <div>
+
+  return (
+      <div>
             {(props.owner && props.owner.team) ? (
                 <button className="label">Boost your Spirit!</button>
             ):(
@@ -24,11 +25,10 @@ export default function SpiritHolder(props) {
             <h3 className="spirittext">Ultimate is expensive! Help cover {"\n"}team expenses, help decide your {"\n"} coach on players!</h3>
         }
         <div>
-            <Link to="/owners/invest/:id">
-                <button className="button2">Help your team!</button>
-            </Link>
-        </div>
-        </div>
-        </div>
-    )
+          
+  <button className="button2" onClick={props.investClick}>Help your team!</button>
+</div>
+    </div>
+    </div>)
+
 }

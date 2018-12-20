@@ -14,7 +14,7 @@ export default function YourUpComingEvents(props) {
         </div>
 
         <div className='title'>
-          <h1 className='titletext'> Your team name </h1>
+          <h1 className='titletext'>{props.team.name} </h1>
         </div>
 
         {/* <div className='insidebox'>

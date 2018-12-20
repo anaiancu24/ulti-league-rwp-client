@@ -31,7 +31,7 @@ class LoginFormContainer extends PureComponent {
 
 	render() {
 		if (this.props.currentUser) return (
-			<Redirect to="/" />
+			<Redirect to="/dashboard" />
 		)
 
 		return (
