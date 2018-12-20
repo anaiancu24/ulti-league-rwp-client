@@ -3,22 +3,31 @@ import { connect } from 'react-redux'
 import DraftList from './DraftList';
 import { loadPlayers} from '../../actions/players'
 import PlayerPopup from './PlayerPopup'
+import {selectPlayer} from '../../actions/selectPlayer'
 
 
 class DraftListContainer extends PureComponent {
 
 state = {
-  showPopup: false  
+  showPopup: false,
+  playerId: ''  
 }
 
-//  componentDidMount() {
-//     if (!this.props.players) {
-//       this.props.loadPlayers()
-//     }
-//   }
 
- togglePopup = () => {
+
+selectPlayer = (playerId) => {
+  if(this.state.showPopup) {
     this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+
+  this.props.selectPlayer(this.props.ownerId, playerId)
+}
+
+ togglePopup = (playerId) => {
+    this.setState({
+      playerId,
       showPopup: !this.state.showPopup
     });
   }
@@ -26,9 +35,9 @@ state = {
   render() {
     return (
       <div className='draft-list'>
-        <DraftList togglePopup={this.togglePopup} players={this.props.players}/>
+        <DraftList togglePopup={this.togglePopup} availablePlayers={this.props.availablePlayers} selectPlayer={this.selectPlayer}/>
         {this.state.showPopup && 
-          <PlayerPopup closePopup={this.togglePopup}/> 
+          <PlayerPopup togglePopup={this.togglePopup} pickedPlayer={this.props.availablePlayers.find(player => player.id === this.state.playerId)} selectPlayer={this.selectPlayer} /> 
         }
       </div>
     )
@@ -36,12 +45,13 @@ state = {
 }
 
 const mapStateToProps = state => ({
-  // players: state.players && Object.values(state.players),
-  authenticated: !!state.currentUser
+  authenticated: !!state.currentUser,
+  ownerId : state.owner && state.owner.id
 })
 
 const mapDispatchToProps = {
-  loadPlayers
+  loadPlayers,
+  selectPlayer
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(DraftListContainer)

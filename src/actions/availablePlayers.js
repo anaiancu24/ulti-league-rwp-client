@@ -6,7 +6,7 @@ export const AVAILABLE_PLAYERS_LOADED = 'AVAILABLE_PLAYERS_LOADED'
 
 const availablePlayersLoaded = (availablePlayers) => ({
   type: AVAILABLE_PLAYERS_LOADED,
-  payload: availablePlayers
+  availablePlayers
 })
 
 
