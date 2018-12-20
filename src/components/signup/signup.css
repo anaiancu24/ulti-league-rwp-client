@@ -290,12 +290,55 @@ margin-bottom:50px;
     font-size: 50px;
 }
 
+.gender-option-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.gender-option-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
 .gendername {
     margin-right: 40px;
     font-family: 'Krub', sans-serif;
     font-size: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
 
+.gender-option-container input:checked ~ .gendername {
+    background-color: #2196F3;
+  }
 
+.gendername:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+.gender-option-container .gendername:after {
+    top: 9px;
+   left: 9px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: white;
 }
 
 .dobform {
