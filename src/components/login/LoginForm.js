@@ -1,13 +1,16 @@
 import * as React from 'react'
 import logo from '../../images/Group2.svg'
 import { Link } from 'react-router-dom'
+import './Login.css'
+
 
 
 export default function LoginForm(props) {
 	return (
-		<div className="login-form">
-			<img className="logologin" src={logo} alt="loog"></img>
-			<form className="formlogin" onSubmit={props.onSubmit}>
+		<div className="login-page2">
+			<form className="formlogin2" onSubmit={props.onSubmit}>
+			<img className="logologin2" src={logo} alt="loog"></img>
+
 
 
 
@@ -20,11 +23,11 @@ export default function LoginForm(props) {
 
 
 
-				<button className='login-form-button' type="submit">Login</button>
+				<button className='login-form-button2' type="submit">Login</button>
 
 				<p className="inline2">Don't have an account?</p>
 				<Link to='/signup/1'>
-					<button className="loginbutton">Sign up</button>
+					<button className="loginbutton2">Sign up</button>
 				</Link>
 			</form>
 		</div>)

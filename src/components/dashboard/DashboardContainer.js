@@ -18,9 +18,9 @@ import SpiritHolder from './SpiritHolder';
 class DashboardContainer extends PureComponent {
 
   componentWillMount() {
+    this.props.loadUserData()
     this.props.loadEvents()
     this.props.loadOwner()
-    this.props.loadUserData()
   }
 
   onReady(event) {
