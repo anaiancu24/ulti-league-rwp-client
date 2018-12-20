@@ -27,7 +27,7 @@ export default function SpiritHolder(props) {
       <h3 className="spirittext">Ultimate is expensive! Help cover {"\n"}team expenses, help decide your {"\n"} coach on players!</h3>
       <div>
           
-  <button className="button2">Help your team!</button>
+  <button className="button2" onClick={props.investClick}>Help your team!</button>
 </div>
     </div>
     </div>)

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import './signup.css'
+import './invest.css'
 
 export default class Loading extends PureComponent {
 
@@ -7,15 +7,13 @@ export default class Loading extends PureComponent {
 
         setTimeout(function(){ 
 
-            window.location.href = "/dashboard";
+            window.location.href = "/yourteam";
     
     }, 4000)        
 
         return (
-            <div className="loading-page">
+            <div className="loading-invest-page">
             </div>
         )
     }
 }
-
-

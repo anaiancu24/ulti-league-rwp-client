@@ -54,13 +54,15 @@ export const login = (data) => (dispatch) =>
 			}
 		})
 
-export const signUp = (data) => (dispatch) =>
+export const signUp = (data) => (dispatch) => {
+	const { password, email } = data
 	request
 		.post(`${baseUrl}/users`)
 		.send(data)
 		.then(result => {
 			dispatch(userSignupSuccess())
 		})
+		.then(() => dispatch(login({ email, password })))
 		.catch(err => {
 			if (err.status === 400) {
 				dispatch(userSignupFailed(err.response.body.message))
@@ -69,6 +71,7 @@ export const signUp = (data) => (dispatch) =>
 				console.error(err)
 			}
 		})
+}
 
 export const loadUserData = () => (dispatch, getState) => {
 	const state = getState()

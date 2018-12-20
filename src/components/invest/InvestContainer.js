@@ -29,7 +29,7 @@ class InvestContainer extends PureComponent {
       this.props.updateOwner(this.props.owner.id, this.state.investment)
     }
 
-    this.props.history.push('/yourteam')
+    this.props.history.push('/loadingpageinvest')
   }
 
   onChange = (event) => {

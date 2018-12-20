@@ -12,10 +12,10 @@ import './YourTeam.css'
 
 class YourTeamContainer extends PureComponent {
 
-  componentWillMount() {
+  async componentWillMount() {
     
     if(!this.props.ownerId)
-      this.props.loadOwner()   
+      await this.props.loadOwner()   
   }
   
   render() {

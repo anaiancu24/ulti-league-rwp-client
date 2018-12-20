@@ -12,10 +12,11 @@ class OwnerLandingPage extends PureComponent {
 	}
 
   componentWillMount() {
+    if (!this.props.authenticated) this.props.history.push('/login')
+    if (this.props.isOwner && this.props.owner.team) this.props.history.push('/dashboard')
     this.props.loadTeams()
 
-    if (!this.props.authenticated) this.props.history.push('/login')
-    if (this.props.isOwner) this.props.history.push('/dashboard')
+    
   }
 
 	onSubmit = (event) => {
@@ -48,6 +49,7 @@ class OwnerLandingPage extends PureComponent {
 const mapStateToProps = state => ({
   teams: state.teams,
   authenticated: !!state.currentUser,
+  owner: state.owner,
   isOwner: state.userData && state.userData.account.includes("owner")
   
 })

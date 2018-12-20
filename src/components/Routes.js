@@ -9,7 +9,8 @@ import SignUp1 from './signup/SignUp1'
 import OwnerLandingPage from './owners/OwnerLandingPage';
 import InvestContainer from './invest/InvestContainer';
 import SignUpContainer from './signup/SignUpContainer';
-import Loading from './signup/Loading'
+import Loading from './signup/Loading';
+import LoadingInvest from './invest/LoadingInvest'
 
 export default function Routes() {
   return (
@@ -18,7 +19,7 @@ export default function Routes() {
       <Route exact path="/signup/1" component={SignUp1} />
       <Route exact path="/signup/2" component={SignUpContainer} />
       <Route exact path="/loading" component={Loading} />
-
+      <Route exact path="/loadingpageinvest" component={LoadingInvest} />
       <Route exact path="/" component={HomePage} />
       <Route exact path="/logout" component={LogoutPage} />
       <Route exact path="/owners/landingpage" component={OwnerLandingPage} />
